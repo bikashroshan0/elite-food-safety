@@ -1229,3 +1229,68 @@ footer .elite-brand img {
 .map-link {
     line-height: 1.65
 }
+.contact-details a {
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    gap: 14px;
+    font-weight: bold;
+
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+.contact-details a div {
+    min-width: 0;
+}
+.socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.socials a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+/* Instagram */
+.socials a:nth-child(1) {
+    background: #E4405F;
+}
+
+.socials a:nth-child(1):hover {
+    background: #C13584;
+    transform: translateY(-3px);
+}
+
+/* Facebook */
+.socials a:nth-child(2) {
+    background: #1877F2;
+}
+
+.socials a:nth-child(2):hover {
+    background: #166FE5;
+    transform: translateY(-3px);
+}
+
+/* LinkedIn (Future) */
+.socials a:nth-child(3) {
+    background: #0A66C2;
+}
+
+.socials a:nth-child(3):hover {
+    background: #004182;
+    transform: translateY(-3px);
+}
+/* * {
+    outline: 1px solid red !important;
+} */
