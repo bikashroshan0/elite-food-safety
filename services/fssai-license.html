@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSSAI License Registration & Compliance | Elite Food Safety</title>
+
+    <!-- Existing global stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- ISOLATED PAGE STYLES -->
+    <style>
+        /* 
+         * Hard Resets & Isolation:
+         * These classes are uniquely prefixed with 'efs-' and use !important on structural 
+         * properties to prevent global style.css from breaking the layout again.
+         */
+
+        :root {
+            --efs-dark: #1A3B34;
+            --efs-lime: #C0D72F;
+            --efs-cream: #F4F1EA;
+            --efs-white: #FFFFFF;
+            --efs-text: #4A4A4A;
+        }
+
+        .efs-section {
+            display: block !important;
+            width: 100% !important;
+            clear: both !important;
+            float: none !important;
+            flex: none !important;
+            position: relative;
+            box-sizing: border-box;
+            padding: 80px 0;
+        }
+
+        .efs-container {
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding: 0 20px !important;
+            display: block !important;
+            width: 100% !important;
+            box-sizing: border-box;
+            clear: both !important;
+        }
+
+        /* Reusable Typography & Buttons */
+        .efs-eyebrow {
+            display: inline-block;
+            color: var(--efs-lime);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .efs-heading {
+            font-family: 'Playfair Display', serif;
+            color: var(--efs-dark);
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .efs-paragraph {
+            font-family: 'Inter', sans-serif;
+            color: var(--efs-text);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .efs-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            /* Matching homepage button style */
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .efs-btn-primary {
+            background-color: var(--efs-lime);
+            color: var(--efs-dark);
+            border: 2px solid var(--efs-lime);
+        }
+
+        .efs-btn-primary:hover {
+            background-color: transparent;
+        }
+
+        .efs-btn-dark {
+            background-color: var(--efs-dark);
+            color: var(--efs-white);
+            border: 2px solid var(--efs-dark);
+        }
+
+        .efs-btn-dark:hover {
+            background-color: transparent;
+            color: var(--efs-dark);
+        }
+
+        .efs-btn-outline {
+            background-color: transparent;
+            color: var(--efs-white);
+            border: 2px solid var(--efs-white);
+        }
+
+        .efs-btn-outline:hover {
+            background-color: var(--efs-white);
+            color: var(--efs-dark);
+        }
+
+        /* Custom Header Override */
+        .efs-header {
+            background: var(--efs-white);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 100;
+        }
+
+        .efs-header-inner {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            flex-direction: row !important;
+        }
+
+        .efs-nav {
+            display: flex !important;
+            gap: 30px !important;
+            align-items: center !important;
+        }
+
+        .efs-nav a {
+            text-decoration: none;
+            color: var(--efs-dark);
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            transition: color 0.3s;
+        }
+
+        .efs-nav a:hover,
+        .efs-nav a.active {
+            color: var(--efs-lime);
+        }
+
+        /* Hero Section */
+        .efs-hero {
+            background-color: var(--efs-dark);
+            color: var(--efs-white);
+            padding: 100px 0;
+        }
+
+        .efs-hero-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 60px !important;
+            align-items: center !important;
+        }
+
+        .efs-hero h1 {
+            font-size: 3.8rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--efs-white);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .efs-hero .italic-highlight {
+            font-style: italic;
+            color: var(--efs-lime);
+        }
+
+        .efs-hero-img-wrap {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            display: block !important;
+            width: 100% !important;
+        }
+
+        .efs-hero-img-wrap img {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            object-fit: cover;
+        }
+
+        /* Introduction */
+        .efs-intro {
+            background-color: var(--efs-cream);
+        }
+
+        .efs-intro-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1.2fr !important;
+            gap: 50px !important;
+            align-items: center !important;
+        }
+
+        .efs-intro-box {
+            background: var(--efs-white);
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid var(--efs-dark);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Services Grid */
+        .efs-services {
+            background-color: var(--efs-cream);
+            padding-top: 0;
+        }
+
+        .efs-services-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 30px !important;
+            margin-top: 40px;
+        }
+
+        /* Center the 7th card */
+        .efs-services-grid>div:nth-child(7) {
+            grid-column: 2 !important;
+        }
+
+        .efs-card {
+            background: var(--efs-white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+            display: flex !important;
+            flex-direction: column !important;
+            border-top: 4px solid transparent;
+        }
+
+        .efs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--efs-lime);
+        }
+
+        .efs-card-dark {
+            background: var(--efs-dark) !important;
+            color: var(--efs-white) !important;
+            border-top: 4px solid var(--efs-lime) !important;
+        }
+
+        .efs-icon-wrap {
+            width: 50px;
+            height: 50px;
+            background: var(--efs-cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--efs-dark);
+            margin-bottom: 20px;
+        }
+
+        .efs-card-dark .efs-icon-wrap {
+            background: var(--efs-lime);
+        }
+
+        .efs-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--efs-dark);
+        }
+
+        .efs-card-dark h3 {
+            color: var(--efs-white);
+        }
+
+        .efs-card p {
+            color: var(--efs-text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .efs-card-dark p {
+            color: #d1d5d4;
+        }
+
+        .efs-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        .efs-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--efs-text);
+        }
+
+        .efs-card-dark .efs-list li {
+            color: #d1d5d4;
+        }
+
+        .efs-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--efs-lime);
+            font-weight: bold;
+        }
+
+        .efs-link {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: var(--efs-dark);
+            text-decoration: none;
+            margin-top: auto;
+            display: inline-block;
+        }
+
+        .efs-card-dark .efs-link {
+            color: var(--efs-lime);
+        }
+
+        .efs-link:hover {
+            color: var(--efs-lime);
+        }
+
+        /* Why Choose Elite */
+        .efs-premium {
+            background-color: var(--efs-dark);
+            color: var(--efs-white);
+        }
+
+        .efs-premium-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1.2fr !important;
+            gap: 60px !important;
+            align-items: center !important;
+        }
+
+        .efs-features {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 30px !important;
+        }
+
+        .efs-feature-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--efs-white);
+            margin: 15px 0 10px 0;
+        }
+
+        .efs-feature-item p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #d1d5d4;
+            line-height: 1.5;
+        }
+
+        /* Timeline */
+        .efs-timeline-wrapper {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .efs-timeline-line {
+            position: absolute;
+            top: 35px;
+            left: 5%;
+            width: 90%;
+            height: 2px;
+            background: #e0e0e0;
+            z-index: 1;
+        }
+
+        .efs-timeline-step {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .efs-step-num {
+            width: 70px;
+            height: 70px;
+            background: var(--efs-white);
+            border: 2px solid var(--efs-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--efs-dark);
+            margin: 0 auto 15px auto;
+        }
+
+        .efs-timeline-step h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: var(--efs-dark);
+            margin-bottom: 10px;
+        }
+
+        .efs-timeline-step p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--efs-text);
+            line-height: 1.5;
+        }
+
+        /* Industries */
+        .efs-industries {
+            background-color: var(--efs-cream);
+        }
+
+        .efs-ind-grid {
+            display: grid !important;
+            grid-template-columns: repeat(4, 1fr) !important;
+            gap: 20px !important;
+            margin-top: 40px;
+        }
+
+        .efs-ind-card {
+            background: var(--efs-white);
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s;
+        }
+
+        .efs-ind-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .efs-ind-card span {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .efs-ind-card h5 {
+            font-family: 'Playfair Display', serif;
+            color: var(--efs-dark);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        /* FAQ */
+        .efs-faq-wrap {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+        }
+
+        .efs-faq-item {
+            background: var(--efs-white);
+            border: 1px solid #e0e0e0;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .efs-faq-q {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: var(--efs-dark);
+            font-size: 1.1rem;
+        }
+
+        .efs-faq-a {
+            padding: 0 25px 20px 25px;
+            color: var(--efs-text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            display: none;
+        }
+
+        /* CTA */
+        .efs-cta-wrap {
+            background-color: var(--efs-lime);
+            padding: 80px 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Footer Override */
+        .efs-footer {
+            background-color: var(--efs-dark);
+            color: var(--efs-white);
+            padding: 60px 0 20px 0;
+            display: block !important;
+            width: 100% !important;
+            clear: both !important;
+        }
+
+        .efs-footer-grid {
+            display: grid !important;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr !important;
+            gap: 40px !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 992px) {
+
+            .efs-hero-grid,
+            .efs-intro-grid,
+            .efs-premium-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .efs-services-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .efs-services-grid>div:nth-child(7) {
+                grid-column: 1 / span 2 !important;
+            }
+
+            .efs-timeline-wrapper {
+                flex-direction: column !important;
+            }
+
+            .efs-timeline-line {
+                display: none !important;
+            }
+
+            .efs-timeline-step {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .efs-step-num {
+                margin: 0 20px 0 0;
+            }
+
+            .efs-ind-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .efs-footer-grid {
+                grid-template-columns: 1fr 1fr !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .efs-services-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .efs-services-grid>div:nth-child(7) {
+                grid-column: 1 !important;
+            }
+
+            .efs-features {
+                grid-template-columns: 1fr !important;
+            }
+
+            .efs-ind-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .efs-footer-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .efs-header-inner {
+                flex-direction: column !important;
+                gap: 20px !important;
+            }
+
+            .efs-nav {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="home">
+        <div class="container nav-wrap">
+            <a class="brand elite-brand" href="../index.html#home" aria-label="Elite Food Safety and Compliance Services home"><img
+                    src="../assets/elite-logo-new.png" alt="Elite Food Safety and Compliance Services" /></a>
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+            <nav class="nav"><a
+                    class="nav-cta" href="../index.html#contact">Get a Consultation <b>→</b></a></nav>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="efs-section efs-hero">
+        <div class="efs-container efs-hero-grid">
+            <div>
+                <span class="efs-eyebrow">FSSAI Registration & Licensing</span>
+                <h1>Confidence in every <span class="italic-highlight">food decision.</span></h1>
+                <p class="efs-paragraph" style="color: #d1d5d4;">We simplify the complex FSSAI regulatory landscape.
+                    From basic registrations to central licenses, our expert consultants ensure your food business is
+                    fully compliant.</p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <a href="#services" class="efs-btn efs-btn-primary">View Services</a>
+                    <!-- <a href="../contact.html" class="efs-btn efs-btn-outline">Book Consultation</a> -->
+                </div>
+            </div>
+            <div class="efs-hero-img-wrap">
+                <img src="../assets/FSSAI_license_services.png" alt="FSSAI Expert Consultation">
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="efs-section efs-intro">
+        <div class="efs-container">
+            <div class="efs-intro-grid">
+                <div>
+                    <span class="efs-eyebrow" style="color: var(--efs-dark);">Understanding FSSAI</span>
+                    <h2 class="efs-heading">Good food deserves great standards.</h2>
+                    <p class="efs-paragraph">The Food Safety and Standards Authority of India (FSSAI) mandates that
+                        every Food Business Operator (FBO) must obtain a 14-digit registration or license number. This
+                        is not just a legal requirement—it is a mark of quality that builds consumer trust.</p>
+                    <p class="efs-paragraph">Whether you are launching a home bakery, managing a bustling restaurant, or
+                        exporting manufactured goods, maintaining active FSSAI compliance protects your brand from
+                        penalties and operational halts.</p>
+                </div>
+                <div class="efs-intro-box">
+                    <h3
+                        style="font-family: 'Playfair Display', serif; color: var(--efs-dark); font-size: 1.5rem; margin-bottom: 20px;">
+                        Why is it mandatory?</h3>
+                    <ul class="efs-list" style="margin:0;">
+                        <li>Legal prerequisite to commence any food business.</li>
+                        <li>Builds consumer trust and brand credibility.</li>
+                        <li>Prevents heavy penalties and operational shutdowns.</li>
+                        <li>Essential for corporate tie-ups and online delivery platforms.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="efs-section efs-services">
+        <div class="efs-container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2 class="efs-heading">Expertise that moves your business forward.</h2>
+                <p class="efs-paragraph">Comprehensive FSSAI solutions tailored to your specific business scale and
+                    operational requirements.</p>
+            </div>
+
+            <div class="efs-services-grid">
+                <!-- Basic Registration -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h3>Basic Registration</h3>
+                    <p>Designed for petty food business operators, startups, and small-scale vendors with an annual
+                        turnover up to ₹12 Lakhs.</p>
+                    <ul class="efs-list">
+                        <li>Fast-track processing</li>
+                        <li>Minimal documentation</li>
+                        <li>1 to 5 years validity options</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                </div>
+
+                <!-- State Licence (Highlighted) -->
+                <div class="efs-card efs-card-dark">
+                    <div class="efs-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>State Licence</h3>
+                    <p>Mandatory for medium-sized food businesses, manufacturers, and marketers with an annual turnover
+                        between ₹12 Lakhs and ₹20 Crores.</p>
+                    <ul class="efs-list">
+                        <li>Thorough eligibility check</li>
+                        <li>Guidance on facility layout</li>
+                        <li>End-to-end application tracking</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                </div>
+
+                <!-- Central Licence -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Central Licence</h3>
+                    <p>Required for large businesses, importers, exporters, and operators handling multiple states with
+                        turnover exceeding ₹20 Crores.</p>
+                    <ul class="efs-list">
+                        <li>Complex compliance handling</li>
+                        <li>Import/Export clearance</li>
+                        <li>Dedicated compliance manager</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                </div>
+
+                <!-- Licence Modification -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg>
+                    </div>
+                    <h3>Licence Modification</h3>
+                    <p>Update your existing FSSAI license details seamlessly when your business expands, changes
+                        location, or shifts scope.</p>
+                    <ul class="efs-list">
+                        <li>Address & name changes</li>
+                        <li>Capacity upgrades</li>
+                        <li>Swift government approval</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                </div>
+
+                <!-- Licence Renewal -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.3"></path>
+                        </svg>
+                    </div>
+                    <h3>Licence Renewal</h3>
+                    <p>Prevent license expiration and avoid late penalties with our proactive renewal tracking and
+                        filing system.</p>
+                    <ul class="efs-list">
+                        <li>Filing 30 days prior to expiry</li>
+                        <li>Seamless document updating</li>
+                        <li>Penalty prevention</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                </div>
+
+                <!-- Annual Return -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h3>Annual Return Filing</h3>
+                    <p>Accurate and timely submission of mandatory FSSAI Form D1 for manufacturers and importers.</p>
+                    <ul class="efs-list">
+                        <li>Filing before 31st May</li>
+                        <li>Data compilation check</li>
+                        <li>End-to-end portal submission</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                </div>
+
+                <!-- Product Addition -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>Product Addition</h3>
+                    <p>Expand your product lines legally by adding new food categories to your existing Central or State
+                        license.</p>
+                    <ul class="efs-list">
+                        <li>Category mapping</li>
+                        <li>Standardized descriptions</li>
+                        <li>Fast-track approval</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Elite -->
+    <!-- <section class="efs-section efs-premium"> -->
+    <!-- <div class="efs-container efs-premium-grid"> -->
+    <!-- <div>
+                <h2 class="efs-heading" style="color: var(--efs-white);">We turn standards into <br><span
+                        style="color: var(--efs-lime); font-style: italic;">strength.</span></h2>
+                <p class="efs-paragraph" style="color: #d1d5d4;">Partnering with Elite means choosing accuracy, speed,
+                    and deep regulatory expertise. We take the friction out of compliance.</p>
+                <a href="../contact.html" class="efs-btn efs-btn-primary">Consult With Us</a>
+            </div>
+
+            <div class="efs-features">
+                <div class="efs-feature-item"> -->
+    <!-- <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--efs-lime)"
+                        stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <h4>End-to-End Support</h4>
+                    <p>From document drafting to final license delivery, we manage the entire lifecycle.</p>
+                </div>
+                <div class="efs-feature-item">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--efs-lime)"
+                        stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <h4>Expert Guidance</h4>
+                    <p>Our regulatory consultants resolve query revertals and government notices swiftly.</p>
+                </div>
+                <div class="efs-feature-item">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--efs-lime)"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <h4>Fast Turnaround</h4>
+                    <p>Optimized internal processes ensure your application is filed without delays.</p>
+                </div>
+                <div class="efs-feature-item">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--efs-lime)"
+                        stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <h4>100% Compliance</h4>
+                    <p>We guarantee absolute alignment with the latest FoSCoS rules and regulations.</p>
+                </div>
+            </div> -->
+    <!-- </div> -->
+    <!-- </section> -->
+
+    <!-- Timeline -->
+    <section class="efs-section">
+        <div class="efs-container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 class="efs-heading">Our seamless process.</h2>
+                <p class="efs-paragraph">We've streamlined the FSSAI licensing journey into five simple, transparent
+                    steps.</p>
+            </div>
+
+            <div class="efs-timeline-wrapper">
+                <div class="efs-timeline-line"></div>
+
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">1</div>
+                    <h4>Consultation</h4>
+                    <p>Identifying the exact license type for your business scale.</p>
+                </div>
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">2</div>
+                    <h4>Document Collection</h4>
+                    <p>Gathering and validating all mandatory business proofs.</p>
+                </div>
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">3</div>
+                    <h4>Application Filing</h4>
+                    <p>Accurate submission on the government FoSCoS portal.</p>
+                </div>
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">4</div>
+                    <h4>Gov. Processing</h4>
+                    <p>Monitoring status and replying to any department queries.</p>
+                </div>
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">5</div>
+                    <h4>Licence Approval</h4>
+                    <p>Receiving and handing over your valid FSSAI certificate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <!-- <section class="efs-section efs-industries">
+        <div class="efs-container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 class="efs-heading">Industries we serve.</h2>
+                <p class="efs-paragraph">Customized licensing strategies across the entire food supply chain.</p>
+            </div>
+
+            <div class="efs-ind-grid">
+                <div class="efs-ind-card">
+                    <span>🍽️</span> -->
+    <!-- <h5>Restaurant</h5>
+                </div>
+                <div class="efs-ind-card">
+                    <span>☁️</span>
+                    <h5>Cloud Kitchen</h5>
+                </div>
+                <div class="efs-ind-card">
+                    <span>🏭</span>
+                    <h5>Food Manufacturer</h5>
+                </div>
+                <div class="efs-ind-card">
+                    <span>🥖</span>
+                    <h5>Bakery</h5>
+                </div>
+                <div class="efs-ind-card"> -->
+    <!-- <span>🚚</span>
+                    <h5>Distributor</h5>
+                </div>
+                <div class="efs-ind-card">
+                    <span>🏪</span>
+                    <h5>Retailer</h5>
+                </div>
+                <div class="efs-ind-card">
+                    <span>🚢</span>
+                    <h5>Exporter</h5>
+                </div>
+                <div class="efs-ind-card">
+                    <span>🏨</span>
+                    <h5>Hotel</h5>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- FAQ -->
+    <section class="efs-section">
+        <div class="efs-container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 class="efs-heading">Frequently Asked Questions</h2>
+                <p class="efs-paragraph">Clear answers to common questions about FSSAI registration.</p>
+            </div>
+
+            <div class="efs-faq-wrap">
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        What is the validity of an FSSAI License?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">An FSSAI license can be issued for a period ranging from 1 to 5 years,
+                        depending on your preference and the fee paid during registration. It must be renewed before
+                        expiration.</div>
+                </div>
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        Do home bakers need an FSSAI registration?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">Yes. Irrespective of the scale, anyone manufacturing, selling, or handling
+                        food, including home bakers, must have at least a Basic FSSAI Registration.</div>
+                </div>
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        What happens if I don't renew my license on time?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">Failure to renew your FSSAI license before its expiry incurs a penalty of
+                        ₹100 per day. If not renewed within a specific grace period, the license is canceled, requiring
+                        a fresh application.</div>
+                </div>
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        How long does it take to get the FSSAI certificate?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">Basic Registration usually takes 7-10 working days. State and Central
+                        Licenses can take between 30 to 45 days, subject to document verification and department
+                        queries.</div>
+                </div>
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        Can I upgrade my Basic Registration to a State License?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">Yes, if your annual turnover crosses ₹12 Lakhs, you are legally required to
+                        apply for a modification/upgrade from a Basic Registration to a State License.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="efs-section" style="padding-top: 20px;">
+        <div class="efs-container">
+            <div class="efs-cta-wrap">
+                <h2 class="efs-heading">Ready to raise the standard?</h2>
+                <p class="efs-paragraph" style="color: var(--efs-dark); max-width: 600px; margin: 0 auto 30px auto;">Let
+                    our experts handle your FSSAI compliance while you run your business.</p>
+                <a href="../index.html#contact" class="efs-btn efs-btn-dark">Book a Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <!-- <a class="brand footer-brand" href="#home"><span
+            class="brand-mark">F</span><span>Food<span>Adda</span><small>FOOD SAFETY SOLUTIONS</small></span></a> -->
+                <a class="brand elite-brand" href="#home"
+                    aria-label="Elite Food Safety and Compliance Services home"><img src="../assets/elite-logo-new.png"
+                        alt="Elite Food Safety and Compliance Services" /></a>
+                <p>Helping food businesses build a safer, more trusted future.</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com/elitefoodsafetyandcompliance/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/elitefoodsafetyandcompliance" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4><a href="#about">About Elite</a><a href="#services">Our Services</a><a
+                    href="#industries">Industries</a><a href="#contact">Contact Us</a>
+            </div>
+            <div>
+                <h4>Our Services</h4><a href="#services">Food Safety</a><a href="#services">ISO Certification</a><a
+                    href="#services">FSSAI Compliance</a><a href="#services">Training & Auditing</a>
+            </div>
+            <div>
+                <h4>Visit us</h4>
+                <p>First Floor, Chaudhury Market,<br>Ratu Road, Ranchi, India – 110001</p><a
+                    href="mailto:elitefoodsafetycompliance@gmail.com">elitefoodsafetycompliance@gmail.com</a><a
+                    href="tel:+919876543210">+91
+                    7070704714</a>
+            </div>
+        </div>
+        <div class="container copyright"><span>© 2026 Elite food safety and compliance services. All rights
+                reserved.</span><span>Privacy Policy &nbsp; •
+                &nbsp; Terms of Use</span></div>
+    </footer>
+    <a class="whatsapp" href="https://wa.me/917070704714" aria-label="Chat on WhatsApp" target="_blank"
+        rel="noopener">☏<span>WhatsApp us</span></a>
+    <script src="../script.js"></script>
+
+    <!-- Existing Script -->
+    <script src="../script.js"></script>
+
+    <!-- Local script for FAQ -->
+    <script>
+        function toggleFaq(el) {
+            const answer = el.nextElementSibling;
+            const icon = el.querySelector('span');
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                icon.innerHTML = "+";
+            } else {
+                answer.style.display = "block";
+                icon.innerHTML = "-";
+            }
+        }
+    </script>
+</body>
+
+</html>
