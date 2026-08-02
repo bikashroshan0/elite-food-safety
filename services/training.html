@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FSSAI License Registration & Compliance | Elite Food Safety</title>
+    <title>Food Safety Training & Certification | Elite Food Safety</title>
 
     <!-- Existing global stylesheet -->
     <link rel="stylesheet" href="../style.css">
@@ -19,12 +19,6 @@
 
     <!-- ISOLATED PAGE STYLES -->
     <style>
-        /* 
-         * Hard Resets & Isolation:
-         * These classes are uniquely prefixed with 'efs-' and use !important on structural 
-         * properties to prevent global style.css from breaking the layout again.
-         */
-
         :root {
             --efs-dark: #1A3B34;
             --efs-lime: #C0D72F;
@@ -89,7 +83,6 @@
             font-weight: 600;
             text-decoration: none;
             border-radius: 4px;
-            /* Matching homepage button style */
             transition: all 0.3s ease;
             cursor: pointer;
             text-align: center;
@@ -238,11 +231,6 @@
             margin-top: 40px;
         }
 
-        /* Center the 7th card */
-        .efs-services-grid>div:nth-child(7) {
-            grid-column: 2 !important;
-        }
-
         .efs-card {
             background: var(--efs-white);
             padding: 40px 30px;
@@ -350,39 +338,6 @@
             color: var(--efs-lime);
         }
 
-        /* Why Choose Elite */
-        .efs-premium {
-            background-color: var(--efs-dark);
-            color: var(--efs-white);
-        }
-
-        .efs-premium-grid {
-            display: grid !important;
-            grid-template-columns: 1fr 1.2fr !important;
-            gap: 60px !important;
-            align-items: center !important;
-        }
-
-        .efs-features {
-            display: grid !important;
-            grid-template-columns: 1fr 1fr !important;
-            gap: 30px !important;
-        }
-
-        .efs-feature-item h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            color: var(--efs-white);
-            margin: 15px 0 10px 0;
-        }
-
-        .efs-feature-item p {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            color: #d1d5d4;
-            line-height: 1.5;
-        }
-
         /* Timeline */
         .efs-timeline-wrapper {
             display: flex !important;
@@ -437,44 +392,6 @@
             font-size: 0.85rem;
             color: var(--efs-text);
             line-height: 1.5;
-        }
-
-        /* Industries */
-        .efs-industries {
-            background-color: var(--efs-cream);
-        }
-
-        .efs-ind-grid {
-            display: grid !important;
-            grid-template-columns: repeat(4, 1fr) !important;
-            gap: 20px !important;
-            margin-top: 40px;
-        }
-
-        .efs-ind-card {
-            background: var(--efs-white);
-            padding: 30px 20px;
-            text-align: center;
-            border-radius: 4px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-            transition: transform 0.3s;
-        }
-
-        .efs-ind-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .efs-ind-card span {
-            font-size: 2.5rem;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .efs-ind-card h5 {
-            font-family: 'Playfair Display', serif;
-            color: var(--efs-dark);
-            font-size: 1.1rem;
-            margin: 0;
         }
 
         /* FAQ */
@@ -542,19 +459,13 @@
         @media (max-width: 992px) {
 
             .efs-hero-grid,
-            .efs-intro-grid,
-            .efs-premium-grid {
+            .efs-intro-grid {
                 grid-template-columns: 1fr !important;
             }
 
             .efs-services-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
             }
-
-            .efs-services-grid>div:nth-child(7) {
-                grid-column: 1 / span 2 !important;
-            }
-
             .efs-timeline-wrapper {
                 flex-direction: column !important;
             }
@@ -573,10 +484,6 @@
                 flex-shrink: 0; /* This stops the circle from squishing into an oval */
             }
 
-            .efs-ind-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
-            }
-
             .efs-footer-grid {
                 grid-template-columns: 1fr 1fr !important;
             }
@@ -584,18 +491,6 @@
 
         @media (max-width: 768px) {
             .efs-services-grid {
-                grid-template-columns: 1fr !important;
-            }
-
-            .efs-services-grid>div:nth-child(7) {
-                grid-column: 1 !important;
-            }
-
-            .efs-features {
-                grid-template-columns: 1fr !important;
-            }
-
-            .efs-ind-grid {
                 grid-template-columns: 1fr !important;
             }
 
@@ -633,18 +528,16 @@
     <section class="efs-section efs-hero">
         <div class="efs-container efs-hero-grid">
             <div>
-                <span class="efs-eyebrow">FSSAI Registration & Licensing</span>
-                <h1>Confidence in every <span class="italic-highlight">food decision.</span></h1>
-                <p class="efs-paragraph" style="color: #d1d5d4;">We simplify the complex FSSAI regulatory landscape.
-                    From basic registrations to central licenses, our expert consultants ensure your food business is
-                    fully compliant.</p>
+                <span class="efs-eyebrow">Professional Food Safety Training</span>
+                <h1>Empower your team with <span class="italic-highlight">expert knowledge.</span></h1>
+                <p class="efs-paragraph" style="color: #d1d5d4;">Comprehensive training programs designed to build a culture of food safety. From FoSTaC certification to HACCP awareness, we equip your staff with the skills needed to maintain compliance and excellence.</p>
                 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                    <a href="#services" class="efs-btn efs-btn-primary">View Services</a>
-                    <!-- <a href="../contact.html" class="efs-btn efs-btn-outline">Book Consultation</a> -->
+                    <a href="#services" class="efs-btn efs-btn-primary">View Programs</a>
                 </div>
             </div>
             <div class="efs-hero-img-wrap">
-                <img src="../assets/FSSAI_license_services.png" alt="FSSAI Expert Consultation">
+                <!-- Replace with an appropriate training image -->
+                <img src="../assets/training.png" alt="Food Safety Training Session">
             </div>
         </div>
     </section>
@@ -654,24 +547,20 @@
         <div class="efs-container">
             <div class="efs-intro-grid">
                 <div>
-                    <span class="efs-eyebrow" style="color: var(--efs-dark);">Understanding FSSAI</span>
-                    <h2 class="efs-heading">Good food deserves great standards.</h2>
-                    <p class="efs-paragraph">The Food Safety and Standards Authority of India (FSSAI) mandates that
-                        every Food Business Operator (FBO) must obtain a 14-digit registration or license number. This
-                        is not just a legal requirement—it is a mark of quality that builds consumer trust.</p>
-                    <p class="efs-paragraph">Whether you are launching a home bakery, managing a bustling restaurant, or
-                        exporting manufactured goods, maintaining active FSSAI compliance protects your brand from
-                        penalties and operational halts.</p>
+                    <span class="efs-eyebrow" style="color: var(--efs-dark);">Why Training Matters</span>
+                    <h2 class="efs-heading">A trained team is your best defense.</h2>
+                    <p class="efs-paragraph">Food safety isn't just about passing inspections; it's about protecting public health and your brand's reputation. Human error is the leading cause of food safety incidents, making proper education absolutely critical to your success.</p>
+                    <p class="efs-paragraph">Our interactive, industry-specific training programs translate complex regulations into practical, everyday habits for your workforce, ensuring quality standards are upheld at every level of your operation.</p>
                 </div>
                 <div class="efs-intro-box">
                     <h3
                         style="font-family: 'Playfair Display', serif; color: var(--efs-dark); font-size: 1.5rem; margin-bottom: 20px;">
-                        Why is it mandatory?</h3>
+                        Benefits of Our Training</h3>
                     <ul class="efs-list" style="margin:0;">
-                        <li>Legal prerequisite to commence any food business.</li>
-                        <li>Builds consumer trust and brand credibility.</li>
-                        <li>Prevents heavy penalties and operational shutdowns.</li>
-                        <li>Essential for corporate tie-ups and online delivery platforms.</li>
+                        <li>Ensure compliance with FSSAI & international standards.</li>
+                        <li>Reduce food waste and prevent contamination.</li>
+                        <li>Boost employee confidence and accountability.</li>
+                        <li>Protect your brand from costly foodborne illness outbreaks.</li>
                     </ul>
                 </div>
             </div>
@@ -682,156 +571,127 @@
     <section id="services" class="efs-section efs-services">
         <div class="efs-container">
             <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-                <h2 class="efs-heading">Expertise that moves your business forward.</h2>
-                <p class="efs-paragraph">Comprehensive FSSAI solutions tailored to your specific business scale and
-                    operational requirements.</p>
+                <h2 class="efs-heading">Transform your workforce.</h2>
+                <p class="efs-paragraph">Explore our specialized training modules tailored for all levels of food handlers, supervisors, and management.</p>
             </div>
 
             <div class="efs-services-grid">
-                <!-- Basic Registration -->
+                <!-- FoSTaC Training -->
                 <div class="efs-card">
                     <div class="efs-icon-wrap">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
                     </div>
-                    <h3>Basic Registration</h3>
-                    <p>Designed for petty food business operators, startups, and small-scale vendors with an annual
-                        turnover up to ₹12 Lakhs.</p>
+                    <h3>FoSTaC Training</h3>
+                    <p>FSSAI-mandated Food Safety Training & Certification designed to instill core safety principles across your team.</p>
                     <ul class="efs-list">
-                        <li>Fast-track processing</li>
-                        <li>Minimal documentation</li>
-                        <li>1 to 5 years validity options</li>
+                        <li>Basic, Advanced & Special courses</li>
+                        <li>FSSAI-certified trainers</li>
+                        <li>Mandatory for all licensed FBOs</li>
                     </ul>
                     <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
                 </div>
 
-                <!-- State Licence (Highlighted) -->
+                <!-- Food Safety Supervisor Training -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h3>Food Safety Supervisor</h3>
+                    <p>Empower your operational leaders to oversee, implement, and maintain strict food safety protocols daily.</p>
+                    <ul class="efs-list">
+                        <li>Leadership in safety compliance</li>
+                        <li>Risk identification & mitigation</li>
+                        <li>Regulatory audit preparation</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                </div>
+
+                <!-- GMP Training -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><path d="M14 8h3"></path><path d="M14 12h5"></path><path d="M14 16h3"></path></svg>
+                    </div>
+                    <h3>GMP Training</h3>
+                    <p>Good Manufacturing Practices education to ensure consistent quality and safety in food production environments.</p>
+                    <ul class="efs-list">
+                        <li>Facility hygiene standards</li>
+                        <li>Equipment maintenance protocols</li>
+                        <li>Process & quality control</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                </div>
+
+                <!-- GHP Training (Highlighted) -->
                 <div class="efs-card efs-card-dark">
                     <div class="efs-icon-wrap">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                            <polyline points="2 17 12 22 22 17"></polyline>
-                            <polyline points="2 12 12 17 22 12"></polyline>
-                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
                     </div>
-                    <h3>State Licence</h3>
-                    <p>Mandatory for medium-sized food businesses, manufacturers, and marketers with an annual turnover
-                        between ₹12 Lakhs and ₹20 Crores.</p>
+                    <h3>GHP Training</h3>
+                    <p>Good Hygiene Practices covering essential sanitary guidelines to prevent contamination in food handling and preparation.</p>
                     <ul class="efs-list">
-                        <li>Thorough eligibility check</li>
-                        <li>Guidance on facility layout</li>
-                        <li>End-to-end application tracking</li>
+                        <li>Sanitation standard operating procedures</li>
+                        <li>Pest control & waste management</li>
+                        <li>Premises cleaning routines</li>
                     </ul>
                     <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
                 </div>
 
-                <!-- Central Licence -->
+                <!-- Personal Hygiene Training -->
                 <div class="efs-card">
                     <div class="efs-icon-wrap">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path
-                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                            </path>
-                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                     </div>
-                    <h3>Central Licence</h3>
-                    <p>Required for large businesses, importers, exporters, and operators handling multiple states with
-                        turnover exceeding ₹20 Crores.</p>
+                    <h3>Personal Hygiene</h3>
+                    <p>Train your staff on critical personal cleanliness habits to eliminate the highest risk factor in cross-contamination.</p>
                     <ul class="efs-list">
-                        <li>Complex compliance handling</li>
-                        <li>Import/Export clearance</li>
-                        <li>Dedicated compliance manager</li>
+                        <li>Proper handwashing techniques</li>
+                        <li>Uniform & grooming standards</li>
+                        <li>Illness reporting & health checks</li>
                     </ul>
                     <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
                 </div>
 
-                <!-- Licence Modification -->
+                <!-- Food Hygiene Training -->
                 <div class="efs-card">
                     <div class="efs-icon-wrap">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                     </div>
-                    <h3>Licence Modification</h3>
-                    <p>Update your existing FSSAI license details seamlessly when your business expands, changes
-                        location, or shifts scope.</p>
+                    <h3>Food Hygiene</h3>
+                    <p>Core principles of handling, storing, and preparing food safely to protect consumers from foodborne illnesses.</p>
                     <ul class="efs-list">
-                        <li>Address & name changes</li>
-                        <li>Capacity upgrades</li>
-                        <li>Swift government approval</li>
+                        <li>Safe temperature control</li>
+                        <li>Allergen management</li>
+                        <li>Cross-contamination prevention</li>
                     </ul>
                     <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
                 </div>
 
-                <!-- Licence Renewal -->
+                <!-- HACCP Awareness Training -->
                 <div class="efs-card">
                     <div class="efs-icon-wrap">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="23 4 23 10 17 10"></polyline>
-                            <polyline points="1 20 1 14 7 14"></polyline>
-                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.3"></path>
-                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
                     </div>
-                    <h3>Licence Renewal</h3>
-                    <p>Prevent license expiration and avoid late penalties with our proactive renewal tracking and
-                        filing system.</p>
+                    <h3>HACCP Awareness</h3>
+                    <p>Hazard Analysis Critical Control Point training to help teams identify, evaluate, and control food safety hazards.</p>
                     <ul class="efs-list">
-                        <li>Filing 30 days prior to expiry</li>
-                        <li>Seamless document updating</li>
-                        <li>Penalty prevention</li>
+                        <li>Understanding the 7 HACCP principles</li>
+                        <li>Identifying critical control points</li>
+                        <li>Monitoring & corrective actions</li>
                     </ul>
                     <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
                 </div>
 
-                <!-- Annual Return -->
+                <!-- Internship & Awareness -->
                 <div class="efs-card">
                     <div class="efs-icon-wrap">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
                     </div>
-                    <h3>Annual Return Filing</h3>
-                    <p>Accurate and timely submission of mandatory FSSAI Form D1 for manufacturers and importers.</p>
+                    <h3>Internships & Awareness</h3>
+                    <p>Programs designed for students and new professionals to gain real-world exposure to food safety compliance and auditing.</p>
                     <ul class="efs-list">
-                        <li>Filing before 31st May</li>
-                        <li>Data compilation check</li>
-                        <li>End-to-end portal submission</li>
-                    </ul>
-                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
-                </div>
-
-                <!-- Product Addition -->
-                <div class="efs-card">
-                    <div class="efs-icon-wrap">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="12" y1="5" x2="12" y2="19"></line>
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                        </svg>
-                    </div>
-                    <h3>Product Addition</h3>
-                    <p>Expand your product lines legally by adding new food categories to your existing Central or State
-                        license.</p>
-                    <ul class="efs-list">
-                        <li>Category mapping</li>
-                        <li>Standardized descriptions</li>
-                        <li>Fast-track approval</li>
+                        <li>Hands-on industry experience</li>
+                        <li>Regulatory framework education</li>
+                        <li>Skill development for future auditors</li>
                     </ul>
                     <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
                 </div>
@@ -839,64 +699,29 @@
         </div>
     </section>
 
-    <!-- Why Choose Elite -->
-    <!-- <section class="efs-section efs-premium"> -->
-    <!-- <div class="efs-container efs-premium-grid"> -->
-    <!-- <div>
-                <h2 class="efs-heading" style="color: var(--efs-white);">We turn standards into <br><span
-                        style="color: var(--efs-lime); font-style: italic;">strength.</span></h2>
-                <p class="efs-paragraph" style="color: #d1d5d4;">Partnering with Elite means choosing accuracy, speed,
-                    and deep regulatory expertise. We take the friction out of compliance.</p>
+    <!-- Why Choose Elite (Commented out per original source structure) -->
+    <!-- 
+    <section class="efs-section efs-premium">
+        <div class="efs-container efs-premium-grid">
+            <div>
+                <h2 class="efs-heading" style="color: var(--efs-white);">We turn standards into <br><span style="color: var(--efs-lime); font-style: italic;">strength.</span></h2>
+                <p class="efs-paragraph" style="color: #d1d5d4;">Partnering with Elite means choosing accuracy, speed, and deep regulatory expertise. We take the friction out of compliance.</p>
                 <a href="../contact.html" class="efs-btn efs-btn-primary">Consult With Us</a>
             </div>
-
+            
             <div class="efs-features">
-                <div class="efs-feature-item"> -->
-    <!-- <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--efs-lime)"
-                        stroke-width="2">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                    <h4>End-to-End Support</h4>
-                    <p>From document drafting to final license delivery, we manage the entire lifecycle.</p>
-                </div>
-                <div class="efs-feature-item">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--efs-lime)"
-                        stroke-width="2">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    <h4>Expert Guidance</h4>
-                    <p>Our regulatory consultants resolve query revertals and government notices swiftly.</p>
-                </div>
-                <div class="efs-feature-item">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--efs-lime)"
-                        stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                    <h4>Fast Turnaround</h4>
-                    <p>Optimized internal processes ensure your application is filed without delays.</p>
-                </div>
-                <div class="efs-feature-item">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--efs-lime)"
-                        stroke-width="2">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    </svg>
-                    <h4>100% Compliance</h4>
-                    <p>We guarantee absolute alignment with the latest FoSCoS rules and regulations.</p>
-                </div>
-            </div> -->
-    <!-- </div> -->
-    <!-- </section> -->
+                ... (Features omitted to keep clean structure) ...
+            </div>
+        </div>
+    </section>
+    -->
+
 <!-- Timeline -->
     <section class="efs-section">
         <div class="efs-container">
             <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <h2 class="efs-heading">Our seamless process.</h2>
-                <p class="efs-paragraph">We've streamlined the FSSAI licensing journey into five simple, transparent steps.</p>
+                <h2 class="efs-heading">Our training process.</h2>
+                <p class="efs-paragraph">A structured, hassle-free approach to upskilling your workforce and ensuring total compliance.</p>
             </div>
 
             <div class="efs-timeline-wrapper">
@@ -905,138 +730,98 @@
                 <div class="efs-timeline-step">
                     <div class="efs-step-num">1</div>
                     <div>
-                        <h4>Consultation</h4>
-                        <p>Identifying the exact license type for your business scale.</p>
+                        <h4>Needs Assessment</h4>
+                        <p>We evaluate your business type and identify mandatory training requirements.</p>
                     </div>
                 </div>
                 <div class="efs-timeline-step">
                     <div class="efs-step-num">2</div>
                     <div>
-                        <h4>Document Collection</h4>
-                        <p>Gathering and validating all mandatory business proofs.</p>
+                        <h4>Customization</h4>
+                        <p>Tailoring the course material to address your specific operational hazards.</p>
                     </div>
                 </div>
                 <div class="efs-timeline-step">
                     <div class="efs-step-num">3</div>
                     <div>
-                        <h4>Application Filing</h4>
-                        <p>Accurate submission on the government FoSCoS portal.</p>
+                        <h4>Scheduling</h4>
+                        <p>Arranging flexible training sessions (on-site or online) to minimize disruption.</p>
                     </div>
                 </div>
                 <div class="efs-timeline-step">
                     <div class="efs-step-num">4</div>
                     <div>
-                        <h4>Gov. Processing</h4>
-                        <p>Monitoring status and replying to any department queries.</p>
+                        <h4>Delivery</h4>
+                        <p>Conducting interactive, engaging workshops led by certified expert trainers.</p>
                     </div>
                 </div>
                 <div class="efs-timeline-step">
                     <div class="efs-step-num">5</div>
                     <div>
-                        <h4>Licence Approval</h4>
-                        <p>Receiving and handing over your valid FSSAI certificate.</p>
+                        <h4>Certification</h4>
+                        <p>Issuing recognized certificates (like FoSTaC) upon successful completion.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Industries -->
-    <!-- <section class="efs-section efs-industries">
+    <!-- Industries (Commented out per original source structure) -->
+    <!-- 
+    <section class="efs-section efs-industries">
         <div class="efs-container">
             <div style="text-align: center; max-width: 600px; margin: 0 auto;">
                 <h2 class="efs-heading">Industries we serve.</h2>
                 <p class="efs-paragraph">Customized licensing strategies across the entire food supply chain.</p>
             </div>
-
-            <div class="efs-ind-grid">
-                <div class="efs-ind-card">
-                    <span>🍽️</span> -->
-    <!-- <h5>Restaurant</h5>
-                </div>
-                <div class="efs-ind-card">
-                    <span>☁️</span>
-                    <h5>Cloud Kitchen</h5>
-                </div>
-                <div class="efs-ind-card">
-                    <span>🏭</span>
-                    <h5>Food Manufacturer</h5>
-                </div>
-                <div class="efs-ind-card">
-                    <span>🥖</span>
-                    <h5>Bakery</h5>
-                </div>
-                <div class="efs-ind-card"> -->
-    <!-- <span>🚚</span>
-                    <h5>Distributor</h5>
-                </div>
-                <div class="efs-ind-card">
-                    <span>🏪</span>
-                    <h5>Retailer</h5>
-                </div>
-                <div class="efs-ind-card">
-                    <span>🚢</span>
-                    <h5>Exporter</h5>
-                </div>
-                <div class="efs-ind-card">
-                    <span>🏨</span>
-                    <h5>Hotel</h5>
-                </div>
-            </div>
+            <div class="efs-ind-grid"> ... </div>
         </div>
-    </section> -->
+    </section> 
+    -->
 
     <!-- FAQ -->
     <section class="efs-section">
         <div class="efs-container">
             <div style="text-align: center; max-width: 600px; margin: 0 auto;">
                 <h2 class="efs-heading">Frequently Asked Questions</h2>
-                <p class="efs-paragraph">Clear answers to common questions about FSSAI registration.</p>
+                <p class="efs-paragraph">Clear answers to common questions about our food safety training programs.</p>
             </div>
 
             <div class="efs-faq-wrap">
                 <div class="efs-faq-item">
                     <div class="efs-faq-q" onclick="toggleFaq(this)">
-                        What is the validity of an FSSAI License?
+                        Is FoSTaC training legally mandatory?
                         <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
                     </div>
-                    <div class="efs-faq-a">An FSSAI license can be issued for a period ranging from 1 to 5 years,
-                        depending on your preference and the fee paid during registration. It must be renewed before
-                        expiration.</div>
+                    <div class="efs-faq-a">Yes. FSSAI mandates that all licensed Food Business Operators (FBOs) must have at least one trained and certified Food Safety Supervisor for every 25 food handlers or part thereof on all their premises.</div>
                 </div>
                 <div class="efs-faq-item">
                     <div class="efs-faq-q" onclick="toggleFaq(this)">
-                        Do home bakers need an FSSAI registration?
+                        Do you conduct training on-site at our facility?
                         <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
                     </div>
-                    <div class="efs-faq-a">Yes. Irrespective of the scale, anyone manufacturing, selling, or handling
-                        food, including home bakers, must have at least a Basic FSSAI Registration.</div>
+                    <div class="efs-faq-a">Yes, we offer highly flexible delivery methods. We can conduct in-person training at your facility, host sessions at our training centers, or provide comprehensive online webinars based on your preference.</div>
                 </div>
                 <div class="efs-faq-item">
                     <div class="efs-faq-q" onclick="toggleFaq(this)">
-                        What happens if I don't renew my license on time?
+                        Are your certificates recognized by the government?
                         <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
                     </div>
-                    <div class="efs-faq-a">Failure to renew your FSSAI license before its expiry incurs a penalty of
-                        ₹100 per day. If not renewed within a specific grace period, the license is canceled, requiring
-                        a fresh application.</div>
+                    <div class="efs-faq-a">Absolutely. Our FoSTaC training programs are delivered by FSSAI-empowered trainers, and the certificates issued upon completion are fully recognized by government regulatory bodies.</div>
                 </div>
                 <div class="efs-faq-item">
                     <div class="efs-faq-q" onclick="toggleFaq(this)">
-                        How long does it take to get the FSSAI certificate?
+                        How long do the training sessions usually last?
                         <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
                     </div>
-                    <div class="efs-faq-a">Basic Registration usually takes 7-10 working days. State and Central
-                        Licenses can take between 30 to 45 days, subject to document verification and department
-                        queries.</div>
+                    <div class="efs-faq-a">The duration varies by course. Basic awareness programs may take 4-6 hours, while advanced modules like HACCP or advanced FoSTaC can span 1 to 2 full days to ensure comprehensive understanding.</div>
                 </div>
                 <div class="efs-faq-item">
                     <div class="efs-faq-q" onclick="toggleFaq(this)">
-                        Can I upgrade my Basic Registration to a State License?
+                        Can you customize the training for my specific industry?
                         <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
                     </div>
-                    <div class="efs-faq-a">Yes, if your annual turnover crosses ₹12 Lakhs, you are legally required to
-                        apply for a modification/upgrade from a Basic Registration to a State License.</div>
+                    <div class="efs-faq-a">Yes. We specialize in tailoring our training content, case studies, and practical examples to suit specific sectors, whether you run a bakery, a cloud kitchen, a manufacturing plant, or a retail chain.</div>
                 </div>
             </div>
         </div>
@@ -1046,10 +831,9 @@
     <section class="efs-section" style="padding-top: 20px;">
         <div class="efs-container">
             <div class="efs-cta-wrap">
-                <h2 class="efs-heading">Ready to raise the standard?</h2>
-                <p class="efs-paragraph" style="color: var(--efs-dark); max-width: 600px; margin: 0 auto 30px auto;">Let
-                    our experts handle your FSSAI compliance while you run your business.</p>
-                <a href="../index.html#contact" class="efs-btn efs-btn-dark">Book a Free Consultation</a>
+                <h2 class="efs-heading">Ready to educate your team?</h2>
+                <p class="efs-paragraph" style="color: var(--efs-dark); max-width: 600px; margin: 0 auto 30px auto;">Equip your staff with the knowledge they need to maintain exceptional food safety standards.</p>
+                <a href="../index.html#contact" class="efs-btn efs-btn-dark">Schedule a Training Session</a>
             </div>
         </div>
     </section>
@@ -1057,8 +841,6 @@
     <footer>
         <div class="container footer-grid">
             <div>
-                <!-- <a class="brand footer-brand" href="#home"><span
-            class="brand-mark">F</span><span>Food<span>Adda</span><small>FOOD SAFETY SOLUTIONS</small></span></a> -->
                 <a class="brand elite-brand" href="#home"
                     aria-label="Elite Food Safety and Compliance Services home"><img src="../assets/elite-logo-new.png"
                         alt="Elite Food Safety and Compliance Services" /></a>
@@ -1081,7 +863,7 @@
             </div>
             <div>
                 <h4>Our Services</h4><a href="#services">Food Safety</a><a href="#services">ISO Certification</a><a
-                    href="#services">FSSAI Compliance</a><a href="./training.html">Training & Auditing</a>
+                    href="./fssai-license.html">FSSAI Compliance</a><a href="#services">Training & Auditing</a>
             </div>
             <div>
                 <h4>Visit us</h4>
@@ -1097,9 +879,6 @@
     </footer>
     <a class="whatsapp" href="https://wa.me/917070704714" aria-label="Chat on WhatsApp" target="_blank"
         rel="noopener">☏<span>WhatsApp us</span></a>
-    <script src="../script.js"></script>
-
-    <!-- Existing Script -->
     <script src="../script.js"></script>
 
     <!-- Local script for FAQ -->
