@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultancy & Support Services | Elite Food Safety</title>
+    <title>Food Manufacturing Compliance | Elite Food Safety</title>
 
     <!-- Existing global stylesheet -->
     <link rel="stylesheet" href="../style.css">
@@ -198,7 +198,27 @@
             object-fit: cover;
         }
 
-        /* Services Grid (10 cards) */
+        /* Introduction */
+        .efs-intro {
+            background-color: var(--efs-cream);
+        }
+
+        .efs-intro-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1.2fr !important;
+            gap: 50px !important;
+            align-items: center !important;
+        }
+
+        .efs-intro-box {
+            background: var(--efs-white);
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid var(--efs-dark);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Services Grid (3 Columns for 9 items) */
         .efs-services {
             background-color: var(--efs-cream);
             padding-top: 80px;
@@ -211,11 +231,6 @@
             margin-top: 40px;
         }
 
-        /* Centering the 10th card on desktop */
-        .efs-services-grid > div:nth-child(10) {
-            grid-column: 2 !important;
-        }
-
         .efs-card {
             background: var(--efs-white);
             padding: 40px 30px;
@@ -225,6 +240,7 @@
             display: flex !important;
             flex-direction: column !important;
             border-top: 4px solid transparent;
+            height: 100%;
         }
 
         .efs-card:hover {
@@ -325,7 +341,7 @@
             color: var(--efs-lime);
         }
 
-        /* Why Choose Elite (Updated to 6 items grid) */
+        /* Why Choose Elite */
         .efs-premium {
             background-color: var(--efs-dark);
             color: var(--efs-white);
@@ -353,6 +369,7 @@
             font-size: 1.1rem;
             color: var(--efs-white);
             margin: 15px 0 10px 0;
+            line-height: 1.4;
         }
 
         /* Timeline */
@@ -481,17 +498,13 @@
         /* Responsive Fixes */
         @media (max-width: 992px) {
             .efs-hero-grid,
+            .efs-intro-grid,
             .efs-premium-grid {
                 grid-template-columns: 1fr !important;
             }
 
             .efs-services-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
-            }
-
-            /* Un-center the 10th card for tablet to span across or fit naturally */
-            .efs-services-grid > div:nth-child(10) {
-                grid-column: 1 / span 2 !important;
             }
 
             .efs-features {
@@ -527,10 +540,6 @@
         @media (max-width: 768px) {
             .efs-services-grid {
                 grid-template-columns: 1fr !important;
-            }
-
-            .efs-services-grid > div:nth-child(10) {
-                grid-column: 1 !important;
             }
 
             .efs-features {
@@ -582,177 +591,197 @@
         <div class="efs-container efs-hero-grid">
             <div>
                 <span class="efs-eyebrow">Expert Guidance • Smart Solutions • Total Compliance</span>
-                <h1>Our Consultancy & <br><span class="italic-highlight">Support Services.</span></h1>
-                <p class="efs-paragraph" style="color: #d1d5d4;">We help Food Businesses and Industries to build safe, compliant and sustainable operations with our end-to-end consultancy and support services.</p>
+                <h1>Food Manufacturing <br><span class="italic-highlight">Compliance.</span></h1>
+                <p class="efs-paragraph" style="color: #d1d5d4;">We help food manufacturers build safe, compliant and sustainable operations with our end-to-end setup, planning, and documentation support services.</p>
                 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
                     <a href="#services" class="efs-btn efs-btn-primary">Explore Services</a>
                 </div>
             </div>
             <div class="efs-hero-img-wrap">
-                <!-- Replace with an appropriate consultancy hero image -->
-                <img src="../assets/counsultency_hero.png" alt="Consultancy and Support Professional">
+                <!-- Replace with an appropriate manufacturing/factory image -->
+                <img src="../assets/counsultency_hero.png" alt="Food Manufacturing Plant Equipment">
             </div>
         </div>
     </section>
 
-    <!-- Services Grid (10 Cards) -->
+    <!-- Introduction Section -->
+    <section class="efs-section efs-intro">
+        <div class="efs-container">
+            <div class="efs-intro-grid">
+                <div>
+                    <span class="efs-eyebrow" style="color: var(--efs-dark);">Seamless Setup</span>
+                    <h2 class="efs-heading">Build it right from the ground up.</h2>
+                    <p class="efs-paragraph">Setting up a food manufacturing facility requires strict adherence to regulatory standards long before production begins. From facility layout and machinery selection to label verification and HACCP planning, every detail matters.</p>
+                    <p class="efs-paragraph">Our experts partner with you to ensure your plant is designed for efficiency and compliance, preventing costly rework and regulatory bottlenecks down the line.</p>
+                </div>
+                <div class="efs-intro-box">
+                    <h3
+                        style="font-family: 'Playfair Display', serif; color: var(--efs-dark); font-size: 1.5rem; margin-bottom: 20px;">
+                        Why Partner With Us?</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Inter', sans-serif; color: var(--efs-text); line-height: 1.8;">
+                        <li style="position:relative; padding-left:25px; margin-bottom:10px;"><span style="position:absolute; left:0; color:var(--efs-lime); font-weight:bold;">✓</span> Avoid expensive structural modifications later.</li>
+                        <li style="position:relative; padding-left:25px; margin-bottom:10px;"><span style="position:absolute; left:0; color:var(--efs-lime); font-weight:bold;">✓</span> Ensure hygienic, regulatory-compliant workflows.</li>
+                        <li style="position:relative; padding-left:25px; margin-bottom:10px;"><span style="position:absolute; left:0; color:var(--efs-lime); font-weight:bold;">✓</span> Fast-track your product approvals and licenses.</li>
+                        <li style="position:relative; padding-left:25px; margin-bottom:10px;"><span style="position:absolute; left:0; color:var(--efs-lime); font-weight:bold;">✓</span> Maintain impeccable records for seamless audits.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid (9 Cards) -->
     <section id="services" class="efs-section efs-services">
         <div class="efs-container">
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 class="efs-heading">Our Comprehensive Offerings</h2>
-                <p class="efs-paragraph">From new factory setups to complex regulatory compliance, we provide end-to-end support for your business needs.</p>
+                <h2 class="efs-heading">Our Manufacturing Compliance Services</h2>
+                <p class="efs-paragraph">From new factory setups to complex regulatory documentation, we provide comprehensive support for food processors.</p>
             </div>
 
             <div class="efs-services-grid">
-                <!-- 01 Food Business Consultancy -->
+                <!-- 1. Factory Layout Preparation -->
                 <div class="efs-card">
                     <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-shop" style="font-size: 1.5rem;"></i>
+                        <i class="fa-solid fa-map-location-dot" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h3>Food Business Consultancy</h3>
+                    <h3>1. Factory Layout Preparation</h3>
+                    <p>Design regulatory-compliant facility layouts that ensure hygienic workflows and prevent cross-contamination.</p>
                     <ul class="efs-list">
-                        <li>Expert advice for all types of food businesses.</li>
-                        <li>FSSAI, Quality, Hygiene & Safety compliance guidance.</li>
-                        <li>Improve processes, efficiency and customer satisfaction.</li>
+                        <li>FSSAI compliant structural design</li>
+                        <li>Workflow optimization</li>
+                        <li>Zoning for raw & finished goods</li>
                     </ul>
-                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
                 </div>
 
-                <!-- 02 New Factory Setup -->
+                <!-- 2. Food Processing Unit Setup -->
                 <div class="efs-card efs-card-dark">
                     <div class="efs-icon-wrap">
                         <i class="fa-solid fa-industry" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h3>New Factory Setup</h3>
+                    <h3>2. Food Processing Unit Setup</h3>
+                    <p>End-to-end consultancy for establishing a new food plant, ensuring a smooth transition from concept to production.</p>
                     <ul class="efs-list">
-                        <li>End-to-end support for new food factory setup.</li>
-                        <li>Plant layout, machinery selection, documentation & licensing.</li>
-                        <li>Ensure smooth setup with full regulatory compliance.</li>
+                        <li>Feasibility and planning</li>
+                        <li>Regulatory clearances</li>
+                        <li>Operational readiness</li>
                     </ul>
-                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
                 </div>
 
-                <!-- 03 Water Plant Consultancy -->
+                <!-- 3. Machinery Planning & Selection -->
                 <div class="efs-card">
                     <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-faucet-drip" style="font-size: 1.5rem;"></i>
+                        <i class="fa-solid fa-gears" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h3>Water Plant Consultancy</h3>
+                    <h3>3. Machinery Planning & Selection</h3>
+                    <p>Expert guidance on procuring the right food-grade equipment that aligns with safety standards and capacity needs.</p>
                     <ul class="efs-list">
-                        <li>Consultancy for Packaged Drinking Water & Mineral Water Plants.</li>
-                        <li>Plant design, processes, documentation & compliance.</li>
-                        <li>Support for BIS, FSSAI & other regulatory requirements.</li>
+                        <li>Food-grade material verification</li>
+                        <li>Capacity and efficiency analysis</li>
+                        <li>Vendor evaluation support</li>
                     </ul>
-                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
                 </div>
 
-                <!-- 04 Internship & Industrial Training -->
+                <!-- 4. Food Product Label Compliance -->
                 <div class="efs-card">
                     <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-user-graduate" style="font-size: 1.5rem;"></i>
+                        <i class="fa-solid fa-tags" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h3>Internship & Training</h3>
+                    <h3>4. Food Product Label Compliance</h3>
+                    <p>Ensure your packaging artwork meets all FSSAI and legal metrology requirements before going to print.</p>
                     <ul class="efs-list">
-                        <li>Industrial training for students and professionals.</li>
-                        <li>Practical learning on Food Safety, Quality & Compliance.</li>
-                        <li>Certificates & hands-on industry experience.</li>
+                        <li>Mandatory declarations review</li>
+                        <li>Ingredient list formatting</li>
+                        <li>Allergen warning compliance</li>
                     </ul>
-                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
                 </div>
 
-                <!-- 05 Documentation Support -->
+                <!-- 5. Nutritional Information Verification -->
                 <div class="efs-card efs-card-dark">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-flask" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>5. Nutritional Information Verification</h3>
+                    <p>Accurate calculation and verification of nutritional facts panels to ensure truthful consumer communication.</p>
+                    <ul class="efs-list">
+                        <li>Calorie & macronutrient checks</li>
+                        <li>Lab report cross-verification</li>
+                        <li>Format compliance</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 6. Product Approval Guidance -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-stamp" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>6. Product Approval Guidance</h3>
+                    <p>Specialized assistance for non-specified or novel foods requiring prior approval from central authorities.</p>
+                    <ul class="efs-list">
+                        <li>Dossier preparation</li>
+                        <li>Safety & efficacy documentation</li>
+                        <li>FSSAI liaison support</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 7. HACCP Plan Preparation -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-shield-virus" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>7. HACCP Plan Preparation</h3>
+                    <p>Development of robust Hazard Analysis Critical Control Point plans tailored to your specific manufacturing processes.</p>
+                    <ul class="efs-list">
+                        <li>Hazard identification</li>
+                        <li>CCP determination</li>
+                        <li>Monitoring & corrective actions</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 8. SOP Preparation -->
+                <div class="efs-card efs-card-dark">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-file-contract" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>8. SOP Preparation</h3>
+                    <p>Drafting precise Standard Operating Procedures for hygiene, sanitation, and daily plant operations.</p>
+                    <ul class="efs-list">
+                        <li>Cleaning & sanitation (SSOPs)</li>
+                        <li>Personnel hygiene policies</li>
+                        <li>Equipment handling procedures</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 9. Compliance Documentation & Record Keeping -->
+                <div class="efs-card">
                     <div class="efs-icon-wrap">
                         <i class="fa-solid fa-folder-open" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h3>Documentation Support</h3>
+                    <h3>9. Compliance Documentation</h3>
+                    <p>Setup of comprehensive record-keeping systems required by inspectors during routine and surprise audits.</p>
                     <ul class="efs-list">
-                        <li>SOPs, Policies, Manuals, Forms & Record preparation.</li>
-                        <li>Food Safety Management System documentation.</li>
-                        <li>Customized documents as per your business needs.</li>
+                        <li>Logbooks and forms creation</li>
+                        <li>Traceability system setup</li>
+                        <li>Recall protocol documentation</li>
                     </ul>
-                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
-                </div>
-
-                <!-- 06 Regulatory Compliance Support -->
-                <div class="efs-card">
-                    <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-scale-balanced" style="font-size: 1.5rem;"></i>
-                    </div>
-                    <h3>Regulatory Compliance</h3>
-                    <ul class="efs-list">
-                        <li>Stay updated with latest legal & regulatory requirements.</li>
-                        <li>FSSAI, Factory, Pollution, Fire, Labelling & other compliances.</li>
-                        <li>End-to-end support to avoid penalties & legal issues.</li>
-                    </ul>
-                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
-                </div>
-
-                <!-- 07 Risk Assessment -->
-                <div class="efs-card">
-                    <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-shield-halved" style="font-size: 1.5rem;"></i>
-                    </div>
-                    <h3>Risk Assessment</h3>
-                    <ul class="efs-list">
-                        <li>Identify potential risks in your operations.</li>
-                        <li>Evaluate, analyze and control risks effectively.</li>
-                        <li>Build a safer, stronger and more compliant business.</li>
-                    </ul>
-                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
-                </div>
-
-                <!-- 08 Mock Audit -->
-                <div class="efs-card efs-card-dark">
-                    <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-clipboard-check" style="font-size: 1.5rem;"></i>
-                    </div>
-                    <h3>Mock Audit</h3>
-                    <ul class="efs-list">
-                        <li>Pre-audit assessment of your systems and processes.</li>
-                        <li>Identify gaps and prepare for external audits.</li>
-                        <li>Improve compliance and audit readiness.</li>
-                    </ul>
-                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
-                </div>
-
-                <!-- 09 Vendor Audit -->
-                <div class="efs-card">
-                    <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-handshake" style="font-size: 1.5rem;"></i>
-                    </div>
-                    <h3>Vendor Audit</h3>
-                    <ul class="efs-list">
-                        <li>Evaluate and audit your vendors and suppliers.</li>
-                        <li>Ensure quality, safety and compliance in supply chain.</li>
-                        <li>Strengthen vendor performance & reduce business risks.</li>
-                    </ul>
-                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
-                </div>
-
-                <!-- 10 CAPA Support (Centered via CSS on desktop) -->
-                <div class="efs-card">
-                    <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-wrench" style="font-size: 1.5rem;"></i>
-                    </div>
-                    <h3>CAPA Support</h3>
-                    <ul class="efs-list">
-                        <li>Support for Corrective & Preventive Action.</li>
-                        <li>Resolve non-conformities effectively.</li>
-                        <li>Continuous improvement for better performance.</li>
-                    </ul>
-                    <a href="../contact.html" class="efs-link">Get Details &rarr;</a>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Elite? (6 items from infographic) -->
+    <!-- Why Choose Elite? (6 items) -->
     <section class="efs-section efs-premium">
         <div class="efs-container efs-premium-grid">
             <div>
                 <h2 class="efs-heading" style="color: var(--efs-white);">Why Choose <br><span style="color: var(--efs-lime); font-style: italic;">Elite?</span></h2>
-                <p class="efs-paragraph" style="color: #d1d5d4;">Your partner in food safety, quality, and compliance. We deliver tailored strategies to protect and elevate your operations.</p>
+                <p class="efs-paragraph" style="color: #d1d5d4;">Your partner in food safety, quality, and compliance. We deliver tailored strategies to protect and elevate your manufacturing operations.</p>
                 <a href="../contact.html" class="efs-btn efs-btn-primary">Contact Us Today!</a>
             </div>
             
@@ -789,8 +818,8 @@
     <section class="efs-section" style="background-color: #ffffff;">
         <div class="efs-container">
             <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <h2 class="efs-heading">Our Consultancy Approach.</h2>
-                <p class="efs-paragraph">A systematic method to ensure your operations are optimized, safe, and fully compliant.</p>
+                <h2 class="efs-heading">Our Setup Approach.</h2>
+                <p class="efs-paragraph">A systematic method to ensure your manufacturing operations are optimized, safe, and fully compliant.</p>
             </div>
 
             <div class="efs-timeline-wrapper">
@@ -800,35 +829,35 @@
                     <div class="efs-step-num">1</div>
                     <div>
                         <h4>Identify & Evaluate</h4>
-                        <p>We analyze your current operations, pinpointing regulatory gaps and business risks.</p>
+                        <p>We analyze your product type and production scale to determine layout and machinery needs.</p>
                     </div>
                 </div>
                 <div class="efs-timeline-step">
                     <div class="efs-step-num">2</div>
                     <div>
                         <h4>Strategy & Planning</h4>
-                        <p>Developing customized solutions, from plant layouts to compliance roadmaps.</p>
+                        <p>Developing compliant blueprints, equipment lists, and a regulatory clearance roadmap.</p>
                     </div>
                 </div>
                 <div class="efs-timeline-step">
                     <div class="efs-step-num">3</div>
                     <div>
                         <h4>Documentation</h4>
-                        <p>Drafting robust SOPs, manuals, and records required for strict compliance.</p>
+                        <p>Drafting robust HACCP plans, SOPs, and packaging labels for strict compliance.</p>
                     </div>
                 </div>
                 <div class="efs-timeline-step">
                     <div class="efs-step-num">4</div>
                     <div>
                         <h4>Implementation</h4>
-                        <p>Executing the planned systems, providing hands-on training and setup support.</p>
+                        <p>Executing the planned systems, providing hands-on setup support and personnel training.</p>
                     </div>
                 </div>
                 <div class="efs-timeline-step">
                     <div class="efs-step-num">5</div>
                     <div>
                         <h4>Audit & Control</h4>
-                        <p>Conducting mock audits and establishing CAPA for continuous improvement.</p>
+                        <p>Conducting pre-operational checks to ensure you are ready for government inspections.</p>
                     </div>
                 </div>
             </div>
@@ -840,7 +869,7 @@
         <div class="efs-container">
             <div style="text-align: center; max-width: 600px; margin: 0 auto;">
                 <h2 class="efs-heading">Frequently Asked Questions</h2>
-                <p class="efs-paragraph">Common questions about our consultancy and support programs.</p>
+                <p class="efs-paragraph">Common questions about manufacturing compliance and factory setup.</p>
             </div>
 
             <div class="efs-faq-wrap">
@@ -849,35 +878,28 @@
                         Do you help with end-to-end factory setups?
                         <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
                     </div>
-                    <div class="efs-faq-a">Yes! Our New Factory Setup Consultancy covers everything from initial plant layout design and machinery selection to final documentation and securing required licenses.</div>
+                    <div class="efs-faq-a">Yes! Our Food Processing Unit Setup Consultancy covers everything from initial plant layout design and machinery selection to final documentation and securing required licenses.</div>
                 </div>
                 <div class="efs-faq-item">
                     <div class="efs-faq-q" onclick="toggleFaq(this)">
                         What does your Documentation Support include?
                         <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
                     </div>
-                    <div class="efs-faq-a">We prepare customized SOPs (Standard Operating Procedures), compliance policies, operational manuals, and record formats essential for maintaining a Food Safety Management System.</div>
+                    <div class="efs-faq-a">We prepare customized SOPs (Standard Operating Procedures), compliance policies, HACCP plans, operational manuals, and record formats essential for maintaining a safe manufacturing facility.</div>
                 </div>
                 <div class="efs-faq-item">
                     <div class="efs-faq-q" onclick="toggleFaq(this)">
-                        How can a Mock Audit help my business?
+                        Why is label compliance so important?
                         <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
                     </div>
-                    <div class="efs-faq-a">A Mock Audit is a pre-assessment of your facility and processes that mimics a real external audit. It helps identify critical gaps so you can fix them before the actual regulatory inspectors arrive, ensuring you pass with flying colors.</div>
+                    <div class="efs-faq-a">Non-compliant labels are one of the leading causes of product recalls and FSSAI penalties. We ensure your labels have all mandatory declarations, correct nutritional info, and proper allergen warnings before you print.</div>
                 </div>
                 <div class="efs-faq-item">
                     <div class="efs-faq-q" onclick="toggleFaq(this)">
-                        Do you provide specific consultancy for Water Plants?
+                        Can you help us get a novel food product approved?
                         <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
                     </div>
-                    <div class="efs-faq-a">Yes, we offer specialized consultancy for Packaged Drinking Water and Mineral Water plants, assisting with plant design, BIS compliance, FSSAI regulations, and overall documentation.</div>
-                </div>
-                <div class="efs-faq-item">
-                    <div class="efs-faq-q" onclick="toggleFaq(this)">
-                        What is CAPA support?
-                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
-                    </div>
-                    <div class="efs-faq-a">CAPA stands for Corrective and Preventive Action. When non-conformities are found in your processes or during an audit, we help you identify the root cause and implement strategies to fix the issue and prevent it from happening again.</div>
+                    <div class="efs-faq-a">Yes. We provide complete Product Approval Guidance, helping you prepare the necessary dossiers and safety data to get non-specified ingredients or novel foods approved by central authorities.</div>
                 </div>
             </div>
         </div>
@@ -887,8 +909,8 @@
     <section class="efs-section" style="padding-top: 20px; background-color: var(--efs-cream);">
         <div class="efs-container">
             <div class="efs-cta-wrap">
-                <h2 class="efs-heading">Need expert guidance?</h2>
-                <p class="efs-paragraph" style="color: var(--efs-dark); max-width: 600px; margin: 0 auto 30px auto;">Partner with Elite to ensure your operations are safe, optimized, and fully compliant.</p>
+                <h2 class="efs-heading">Need expert setup guidance?</h2>
+                <p class="efs-paragraph" style="color: var(--efs-dark); max-width: 600px; margin: 0 auto 30px auto;">Partner with Elite to ensure your manufacturing operations are built safely, optimized, and fully compliant.</p>
                 <a href="../index.html#contact" class="efs-btn efs-btn-dark">Get in Touch Today</a>
             </div>
         </div>
@@ -923,15 +945,15 @@
             </div>
             <div>
                 <h4>Visit us</h4>
-                <p>First Floor, Chaudhury Market,<br>Ratu Road, Ranchi, India – 110001</p><a
-                    href="mailto:elitefoodsafetycompliance@gmail.com">elitefoodsafetycompliance@gmail.com</a><a
-                    href="tel:+919876543210">+91
+                <p>4th Floor, Sharanam Tower, Kilburn Colony, Main Road, Hinoo, Ranchi, Jharkhand – 834002 </p><a
+                    href="mailto:contact@elitefoodsafety.in">contact@elitefoodsafety.in</a><a
+                    href="tel:+917070704714">+91
                     7070704714</a>
             </div>
         </div>
         <div class="container copyright"><span>© 2026 Elite food safety and compliance services. All rights
-                reserved.</span><span>Privacy Policy &nbsp; •
-                &nbsp; Terms of Use</span></div>
+                reserved.</span><span>Privacy Policy   •
+                  Terms of Use</span></div>
     </footer>
     <a class="whatsapp" href="https://wa.me/917070704714" aria-label="Chat on WhatsApp" target="_blank"
         rel="noopener">☏<span>WhatsApp us</span></a>

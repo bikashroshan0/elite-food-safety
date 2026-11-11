@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audit & Documentation Services | Elite Food Safety</title>
+    <title>Food Safety Audit Services | Elite Food Safety</title>
 
     <!-- Existing global stylesheet -->
     <link rel="stylesheet" href="../style.css">
@@ -218,7 +218,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
-        /* Services Grid (Updated to 2 columns for heavy content cards) */
+        /* Services Grid (3 Columns for 9 items) */
         .efs-services {
             background-color: #ffffff;
             padding-top: 0;
@@ -226,20 +226,21 @@
 
         .efs-services-grid {
             display: grid !important;
-            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-columns: repeat(3, 1fr) !important;
             gap: 30px !important;
             margin-top: 40px;
         }
 
         .efs-card {
             background: var(--efs-cream);
-            padding: 40px 40px;
+            padding: 40px 30px;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
             transition: all 0.3s ease;
             display: flex !important;
             flex-direction: column !important;
             border-top: 4px solid transparent;
+            height: 100%;
         }
 
         .efs-card:hover {
@@ -256,8 +257,8 @@
         }
 
         .efs-icon-wrap {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background: var(--efs-white);
             border-radius: 50%;
             display: flex;
@@ -274,8 +275,8 @@
 
         .efs-card h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            margin-bottom: 10px;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
             color: var(--efs-dark);
         }
 
@@ -283,47 +284,24 @@
             color: var(--efs-white);
         }
 
-        .efs-card > p {
+        .efs-card p {
             color: var(--efs-text);
             font-family: 'Inter', sans-serif;
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 25px;
-        }
-
-        .efs-card-dark > p {
-            color: #d1d5d4;
-        }
-
-        .efs-card-inner-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             flex-grow: 1;
         }
 
-        .efs-card-subtitle {
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            color: var(--efs-dark);
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            padding-bottom: 5px;
-        }
-
-        .efs-card-dark .efs-card-subtitle {
-            color: var(--efs-lime);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+        .efs-card-dark p {
+            color: #d1d5d4;
         }
 
         .efs-list {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 0 0 30px 0;
+            flex-grow: 1;
         }
 
         .efs-list li {
@@ -528,7 +506,7 @@
             }
 
             .efs-services-grid {
-                grid-template-columns: 1fr !important;
+                grid-template-columns: repeat(2, 1fr) !important;
             }
 
             .efs-features {
@@ -553,7 +531,7 @@
 
             .efs-step-num {
                 margin: 0 20px 0 0;
-                flex-shrink: 0;
+                flex-shrink: 0; 
             }
 
             .efs-footer-grid {
@@ -562,6 +540,10 @@
         }
 
         @media (max-width: 768px) {
+            .efs-services-grid {
+                grid-template-columns: 1fr !important;
+            }
+
             .efs-features {
                 grid-template-columns: 1fr !important;
                 text-align: left;
@@ -574,11 +556,6 @@
             }
             .efs-feature-item h4 {
                 margin: 0;
-            }
-
-            .efs-card-inner-grid {
-                grid-template-columns: 1fr !important;
-                gap: 30px;
             }
 
             .efs-footer-grid {
@@ -616,14 +593,13 @@
         <div class="efs-container efs-hero-grid">
             <div>
                 <span class="efs-eyebrow">Ensuring Food Safety, Quality & Compliance</span>
-                <h1>Audit<br><span class="italic-highlight">Services.</span></h1>
+                <h1>Audit & Documentation <br><span class="italic-highlight">Services.</span></h1>
                 <p class="efs-paragraph" style="color: #d1d5d4;">Expert auditors. Accurate reports. Total regulatory compliance. We safeguard your operations through meticulous internal audits, third-party assessments, and flawless documentation.</p>
                 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
                     <a href="#services" class="efs-btn efs-btn-primary">View Services</a>
                 </div>
             </div>
             <div class="efs-hero-img-wrap">
-                <!-- Replace with an appropriate audit hero image -->
                 <img src="../assets/auditing-hero.png" alt="Food Safety Auditing Professional">
             </div>
         </div>
@@ -653,156 +629,154 @@
         </div>
     </section>
 
-    <!-- Services Grid (4 Large Cards, 2 Columns) -->
+    <!-- Services Grid (9 Cards) -->
     <section id="services" class="efs-section efs-services">
         <div class="efs-container">
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
                 <h2 class="efs-heading">Our Core Auditing Services</h2>
-                <p class="efs-paragraph">From internal gap analysis to full-scale documentation preparation, we ensure your business is bulletproof.</p>
+                <p class="efs-paragraph">Comprehensive audit frameworks designed to secure every aspect of your food manufacturing, storage, and service operations.</p>
             </div>
 
             <div class="efs-services-grid">
-                <!-- 01 Internal Food Safety Audit -->
+                <!-- 1. Food Safety Audit -->
                 <div class="efs-card">
                     <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-magnifying-glass-chart" style="font-size: 1.8rem;"></i>
+                        <i class="fa-solid fa-clipboard-list" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h3>01. Internal Food Safety Audit</h3>
-                    <p>Internal audit helps you identify gaps in your food safety system and improve processes regularly.</p>
-                    
-                    <div class="efs-card-inner-grid">
-                        <div>
-                            <div class="efs-card-subtitle">We Check</div>
-                            <ul class="efs-list">
-                                <li>Hygiene & Sanitation</li>
-                                <li>Personal Hygiene</li>
-                                <li>Raw Material & Storage</li>
-                                <li>Process Control</li>
-                                <li>Temperature Monitoring</li>
-                                <li>Documentation & Records</li>
-                                <li>Pest Control</li>
-                                <li>Traceability & Recall</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="efs-card-subtitle">Benefits</div>
-                            <ul class="efs-list">
-                                <li>Identify gaps & reduce risks</li>
-                                <li>Improve food safety performance</li>
-                                <li>Cost effective & continuous improvement</li>
-                                <li>Be ready for external audits</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="../contact.html" class="efs-link">Request an Audit &rarr;</a>
+                    <h3>1. Food Safety Audit</h3>
+                    <p>A comprehensive assessment to evaluate your overall compliance with national and international food safety protocols.</p>
+                    <ul class="efs-list">
+                        <li>General compliance check</li>
+                        <li>Risk identification</li>
+                        <li>Detailed action reporting</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request an Audit →</a>
                 </div>
 
-                <!-- 02 Third Party Food Safety Audit -->
+                <!-- 2. Third Party Audit -->
                 <div class="efs-card efs-card-dark">
                     <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-user-shield" style="font-size: 1.8rem;"></i>
+                        <i class="fa-solid fa-user-shield" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h3>02. Third Party Food Safety Audit</h3>
-                    <p>Independent audit by external experts to verify compliance with food safety standards and legal requirements.</p>
-                    
-                    <div class="efs-card-inner-grid">
-                        <div>
-                            <div class="efs-card-subtitle">We Check</div>
-                            <ul class="efs-list">
-                                <li>FSSAI Compliance</li>
-                                <li>GMP & GHP Compliance</li>
-                                <li>HACCP Implementation</li>
-                                <li>Legal & Regulatory Compliance</li>
-                                <li>Process & Product Safety</li>
-                                <li>Documentation Review</li>
-                                <li>Corrective Actions</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="efs-card-subtitle">Benefits</div>
-                            <ul class="efs-list">
-                                <li>Build customer & stakeholder trust</li>
-                                <li>Ensure legal compliance</li>
-                                <li>Enhance brand reputation</li>
-                                <li>Get unbiased expert evaluation</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="../contact.html" class="efs-link">Request an Audit &rarr;</a>
+                    <h3>2. Third Party Audit</h3>
+                    <p>Independent evaluation by our external experts to verify compliance, providing an unbiased view of your safety systems.</p>
+                    <ul class="efs-list">
+                        <li>Unbiased expert evaluation</li>
+                        <li>Builds stakeholder trust</li>
+                        <li>Enhances brand reputation</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request an Audit →</a>
                 </div>
 
-                <!-- 03 Hygiene Rating Audit -->
+                <!-- 3. Internal Audit -->
                 <div class="efs-card">
                     <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-star" style="font-size: 1.8rem;"></i>
+                        <i class="fa-solid fa-magnifying-glass-chart" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h3>03. Hygiene Rating Audit</h3>
-                    <p>We help you achieve better hygiene rating for your food business as per FSSAI guidelines.</p>
-                    
-                    <div class="efs-card-inner-grid">
-                        <div>
-                            <div class="efs-card-subtitle">We Check</div>
-                            <ul class="efs-list">
-                                <li>Food Handling Practices</li>
-                                <li>Kitchen Hygiene</li>
-                                <li>Infrastructure & Maintenance</li>
-                                <li>Water & Waste Management</li>
-                                <li>Food Safety Management System</li>
-                                <li>Training & Records</li>
-                                <li>Pest Management</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="efs-card-subtitle">Benefits</div>
-                            <ul class="efs-list">
-                                <li>Improve hygiene rating score</li>
-                                <li>Attract more customers</li>
-                                <li>Increase business growth</li>
-                                <li>Ensure food safety & compliance</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="../contact.html" class="efs-link">Improve Your Rating &rarr;</a>
+                    <h3>3. Internal Audit</h3>
+                    <p>Routine self-assessments to proactively identify gaps in your system and improve processes before external inspections.</p>
+                    <ul class="efs-list">
+                        <li>Continuous improvement</li>
+                        <li>Cost-effective risk reduction</li>
+                        <li>Readiness for external audits</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request an Audit →</a>
                 </div>
 
-                <!-- 04 Food Safety Documentation -->
+                <!-- 4. Hygiene Rating Audit -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-star" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>4. Hygiene Rating Audit</h3>
+                    <p>We help you achieve an 'Excellent' hygiene rating for your food business strictly as per FSSAI guidelines.</p>
+                    <ul class="efs-list">
+                        <li>Food handling & kitchen hygiene</li>
+                        <li>Water & waste management</li>
+                        <li>Attract more customers</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Improve Your Rating →</a>
+                </div>
+
+                <!-- 5. Restaurant Hygiene Audit -->
                 <div class="efs-card efs-card-dark">
                     <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-file-signature" style="font-size: 1.8rem;"></i>
+                        <i class="fa-solid fa-utensils" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h3>04. Food Safety Documentation</h3>
-                    <p>Well-documented system ensures consistency, compliance and smooth business operations.</p>
-                    
-                    <div class="efs-card-inner-grid">
-                        <div>
-                            <div class="efs-card-subtitle">We Prepare</div>
-                            <ul class="efs-list">
-                                <li>Food Safety Manual</li>
-                                <li>SOPs / SSOPs</li>
-                                <li>Forms & Formats</li>
-                                <li>HACCP Plan & Records</li>
-                                <li>Training Records</li>
-                                <li>Traceability & Recall Plan</li>
-                                <li>All Required Documents</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="efs-card-subtitle">Benefits</div>
-                            <ul class="efs-list">
-                                <li>Ensure regulatory compliance</li>
-                                <li>Easy to implement & maintain</li>
-                                <li>Supports audits & inspections</li>
-                                <li>Improves operational efficiency</li>
-                            </ul>
-                        </div>
+                    <h3>5. Restaurant Hygiene Audit</h3>
+                    <p>Specialized audits designed specifically for the hospitality sector to ensure safe food preparation and dining environments.</p>
+                    <ul class="efs-list">
+                        <li>Kitchen & dining area sanitation</li>
+                        <li>Cross-contamination control</li>
+                        <li>Staff personal hygiene checks</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request an Audit →</a>
+                </div>
+
+                <!-- 6. Manufacturing Unit Audit -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-industry" style="font-size: 1.5rem;"></i>
                     </div>
-                    <a href="../contact.html" class="efs-link">Get Documentation Support &rarr;</a>
+                    <h3>6. Manufacturing Unit Audit</h3>
+                    <p>In-depth inspection of industrial food processing plants, covering machinery, storage, and large-scale production safety.</p>
+                    <ul class="efs-list">
+                        <li>Raw material & storage checks</li>
+                        <li>Process control verification</li>
+                        <li>Infrastructure & maintenance</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request an Audit →</a>
+                </div>
+
+                <!-- 7. GMP & GHP Audit -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-pump-soap" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>7. GMP & GHP Audit</h3>
+                    <p>Focused assessment on Good Manufacturing Practices and Good Hygiene Practices to ensure baseline sanitary compliance.</p>
+                    <ul class="efs-list">
+                        <li>Facility hygiene standards</li>
+                        <li>Pest control & sanitation</li>
+                        <li>Equipment maintenance</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request an Audit →</a>
+                </div>
+
+                <!-- 8. HACCP Audit -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-shield-virus" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>8. HACCP Audit</h3>
+                    <p>Rigorous verification of your Hazard Analysis Critical Control Point plans to ensure all food safety hazards are controlled.</p>
+                    <ul class="efs-list">
+                        <li>Critical control point monitoring</li>
+                        <li>Hazard analysis validation</li>
+                        <li>Corrective action verification</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request an Audit →</a>
+                </div>
+
+                <!-- 9. Pre-FSSAI Inspection Audit -->
+                <div class="efs-card efs-card-dark">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-clipboard-check" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>9. Pre-FSSAI Inspection Audit</h3>
+                    <p>A comprehensive mock audit designed to prepare your facility specifically for official government FSSAI inspections.</p>
+                    <ul class="efs-list">
+                        <li>FSSAI compliance verification</li>
+                        <li>Identify gaps prior to inspection</li>
+                        <li>Avoid regulatory penalties</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request an Audit →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Elite? (6 items from infographic) -->
+    <!-- Why Choose Elite? -->
     <section class="efs-section efs-premium">
         <div class="efs-container efs-premium-grid">
             <div>
@@ -978,8 +952,8 @@
             </div>
         </div>
         <div class="container copyright"><span>© 2026 Elite food safety and compliance services. All rights
-                reserved.</span><span>Privacy Policy &nbsp; •
-                &nbsp; Terms of Use</span></div>
+                reserved.</span><span>Privacy Policy   •
+                  Terms of Use</span></div>
     </footer>
     <a class="whatsapp" href="https://wa.me/917070704714" aria-label="Chat on WhatsApp" target="_blank"
         rel="noopener">☏<span>WhatsApp us</span></a>

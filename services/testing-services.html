@@ -240,18 +240,22 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
-        /* 4 Column Grid for Testing Categories */
+        /* Services Grid (3 Columns for 8 items) */
         .efs-services {
             background-color: #ffffff;
             padding-top: 0;
         }
 
-        .efs-grid-4 {
+        .efs-services-grid {
             display: grid !important;
-            grid-template-columns: repeat(4, 1fr) !important;
-            gap: 25px !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 30px !important;
             margin-top: 40px;
-            align-items: start;
+        }
+
+        /* Centering the 8th card on desktop to look elegant */
+        .efs-services-grid > div:nth-child(8) {
+            grid-column: 2 !important;
         }
 
         .efs-card {
@@ -273,6 +277,12 @@
             background: var(--efs-white);
         }
 
+        .efs-card-dark {
+            background: var(--efs-dark) !important;
+            color: var(--efs-white) !important;
+            border-top: 4px solid var(--efs-lime) !important;
+        }
+
         .efs-icon-wrap {
             width: 50px;
             height: 50px;
@@ -286,38 +296,79 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
+        .efs-card-dark .efs-icon-wrap {
+            background: var(--efs-lime);
+        }
+
         .efs-card h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.4rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: var(--efs-dark);
+            line-height: 1.3;
         }
 
-        .efs-compact-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .efs-card-dark h3 {
+            color: var(--efs-white);
+        }
+
+        .efs-card p {
+            color: var(--efs-text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
             flex-grow: 1;
         }
 
-        .efs-compact-list li {
+        .efs-card-dark p {
+            color: #d1d5d4;
+        }
+
+        .efs-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            flex-grow: 1;
+        }
+
+        .efs-list li {
             position: relative;
-            padding-left: 18px;
+            padding-left: 20px;
             margin-bottom: 8px;
             font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--efs-text);
             line-height: 1.4;
         }
 
-        .efs-compact-list li::before {
-            content: '•';
+        .efs-card-dark .efs-list li {
+            color: #d1d5d4;
+        }
+
+        .efs-list li::before {
+            content: '✓';
             position: absolute;
             left: 0;
             color: var(--efs-lime);
-            font-size: 1.2rem;
-            line-height: 1;
-            top: -2px;
+            font-weight: bold;
+        }
+
+        .efs-link {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: var(--efs-dark);
+            text-decoration: none;
+            margin-top: auto;
+            display: inline-block;
+        }
+
+        .efs-card-dark .efs-link {
+            color: var(--efs-lime);
+        }
+
+        .efs-link:hover {
+            color: var(--efs-lime);
         }
         
         /* Parameters Pills */
@@ -525,8 +576,12 @@
                 grid-template-columns: 1fr !important;
             }
 
-            .efs-grid-4 {
+            .efs-services-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
+            }
+            
+            .efs-services-grid > div:nth-child(8) {
+                grid-column: 1 / span 2 !important;
             }
 
             .efs-timeline-wrapper {
@@ -556,8 +611,12 @@
         }
 
         @media (max-width: 768px) {
-            .efs-grid-4 {
+            .efs-services-grid {
                 grid-template-columns: 1fr !important;
+            }
+            
+            .efs-services-grid > div:nth-child(8) {
+                grid-column: 1 !important;
             }
 
             .efs-features {
@@ -653,95 +712,136 @@
         </div>
     </section>
 
-    <!-- Services 4-Column Grid -->
+    <!-- Services Grid (8 Cards) -->
     <section id="testing-categories" class="efs-section efs-services">
         <div class="efs-container">
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <h2 class="efs-heading">Our Testing Portfolio</h2>
+                <h2 class="efs-heading">Our Laboratory Testing Portfolio</h2>
                 <p class="efs-paragraph">We cover an exhaustive range of parameters to ensure total environmental, hygiene, and consumption safety.</p>
             </div>
 
-            <div class="efs-grid-4">
-                <!-- 01 Food Testing -->
-                <div class="efs-card">
-                    <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-apple-whole" style="font-size: 1.5rem;"></i>
-                    </div>
-                    <h3>Food Testing</h3>
-                    <ul class="efs-compact-list">
-                        <li>Microbiological Testing</li>
-                        <li>Chemical Testing</li>
-                        <li>Nutritional Analysis</li>
-                        <li>Shelf-Life Testing</li>
-                        <li>Heavy Metal Testing</li>
-                        <li>Pesticide Residue Testing</li>
-                        <li>Mycotoxin Testing</li>
-                        <li>Food Additives & Preservatives</li>
-                        <li>Allergen Testing</li>
-                        <li>Adulteration Testing</li>
-                        <li>Oil & Fat Testing</li>
-                        <li>Milk & Dairy Product Testing</li>
-                        <li>Spices Testing</li>
-                        <li>Edible Oil Testing</li>
-                        <li>Packaged Drinking Water Testing</li>
-                        <li>Beverage Testing</li>
-                        <li>Bakery & Confectionery Testing</li>
-                        <li>Meat & Fish Testing</li>
-                        <li>Fruits & Vegetables Testing</li>
-                        <li>Ready-to-Eat Food Testing</li>
-                    </ul>
-                </div>
-
-                <!-- 02 Water Testing -->
+            <div class="efs-services-grid">
+                
+                <!-- 1. Drinking Water & Packaged Drinking Water Testing -->
                 <div class="efs-card">
                     <div class="efs-icon-wrap">
                         <i class="fa-solid fa-droplet" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h3>Water Testing</h3>
-                    <ul class="efs-compact-list">
-                        <li>Drinking Water Testing</li>
-                        <li>Packaged Drinking Water Testing</li>
-                        <li>Mineral Water Testing</li>
-                        <li>Borewell Water Testing</li>
-                        <li>RO Water Testing</li>
-                        <li>Industrial Water Testing</li>
-                        <li>Waste Water Testing</li>
-                        <li>Swimming Pool Water Testing</li>
-                        <li>Microbiological Water Testing</li>
-                        <li>Chemical Water Analysis</li>
+                    <h3>1. Drinking & Packaged Water Testing</h3>
+                    <p>Comprehensive analysis of drinking, packaged, and mineral water to ensure compliance with strict safety standards.</p>
+                    <ul class="efs-list">
+                        <li>Chemical & mineral analysis</li>
+                        <li>Pathogen & bacteria checks</li>
+                        <li>Regulatory compliance testing</li>
                     </ul>
+                    <a href="../contact.html" class="efs-link">Request a Test →</a>
                 </div>
 
-                <!-- 03 Environmental Testing -->
-                <div class="efs-card">
+                <!-- 2. Raw Material & Finished Product Testing -->
+                <div class="efs-card efs-card-dark">
                     <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-leaf" style="font-size: 1.5rem;"></i>
+                        <i class="fa-solid fa-box-open" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h3>Environmental Testing</h3>
-                    <ul class="efs-compact-list">
-                        <li>Air Quality Testing</li>
-                        <li>Indoor Air Quality Testing</li>
-                        <li>Noise Level Testing</li>
-                        <li>Soil Testing</li>
-                        <li>Effluent Testing</li>
-                        <li>Stack Emission Testing</li>
+                    <h3>2. Raw Material & Finished Product Testing</h3>
+                    <p>End-to-end testing of your food supply chain, from the initial ingredients to the final product ready for consumers.</p>
+                    <ul class="efs-list">
+                        <li>Ingredient quality verification</li>
+                        <li>Contamination screening</li>
+                        <li>Final product safety assurance</li>
                     </ul>
+                    <a href="../contact.html" class="efs-link">Request a Test →</a>
                 </div>
 
-                <!-- 04 Laboratory & Hygiene -->
+                <!-- 3. Microbiological Testing -->
                 <div class="efs-card">
                     <div class="efs-icon-wrap">
-                        <i class="fa-solid fa-pump-medical" style="font-size: 1.5rem;"></i>
+                        <i class="fa-solid fa-bacterium" style="font-size: 1.5rem;"></i>
                     </div>
-                    <h3>Laboratory & Hygiene</h3>
-                    <ul class="efs-compact-list">
-                        <li>Swab Testing</li>
-                        <li>Surface Hygiene Testing</li>
-                        <li>Hand Swab Testing</li>
-                        <li>Equipment Swab Testing</li>
-                        <li>Environmental Monitoring</li>
+                    <h3>3. Microbiological Testing</h3>
+                    <p>Detect and identify harmful microorganisms in food and water that can cause severe foodborne illnesses.</p>
+                    <ul class="efs-list">
+                        <li>E.coli, Salmonella & Listeria</li>
+                        <li>Yeast & Mold count</li>
+                        <li>Total Plate Count (TPC)</li>
                     </ul>
+                    <a href="../contact.html" class="efs-link">Request a Test →</a>
                 </div>
+
+                <!-- 4. Chemical Testing -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-flask" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>4. Chemical Testing</h3>
+                    <p>Precise chemical analysis to detect harmful residues, contaminants, and verify the chemical composition of products.</p>
+                    <ul class="efs-list">
+                        <li>Heavy metal detection</li>
+                        <li>Pesticide residue testing</li>
+                        <li>Food adulteration checks</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request a Test →</a>
+                </div>
+
+                <!-- 5. Food Product Testing -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-apple-whole" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>5. Food Product Testing</h3>
+                    <p>Specialized testing for specific food categories including dairy, bakery, meat, spices, and edible oils.</p>
+                    <ul class="efs-list">
+                        <li>Category-specific parameters</li>
+                        <li>Additive & preservative checks</li>
+                        <li>Allergen detection</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request a Test →</a>
+                </div>
+
+                <!-- 6. NABL Laboratory Testing Support -->
+                <div class="efs-card efs-card-dark">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-microscope" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>6. NABL Laboratory Testing Support</h3>
+                    <p>We facilitate your testing through trusted NABL-accredited partner labs, ensuring your reports are legally valid and highly accurate.</p>
+                    <ul class="efs-list">
+                        <li>Legally compliant reports</li>
+                        <li>Accepted by all regulators</li>
+                        <li>Guaranteed accuracy</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request a Test →</a>
+                </div>
+
+                <!-- 7. Shelf Life Testing Support -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-calendar-days" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>7. Shelf Life Testing Support</h3>
+                    <p>Determine and validate the accurate expiration dates for your products to ensure they remain safe and high-quality over time.</p>
+                    <ul class="efs-list">
+                        <li>Accelerated shelf-life studies</li>
+                        <li>Real-time stability testing</li>
+                        <li>Sensory & quality tracking</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request a Test →</a>
+                </div>
+
+                <!-- 8. Nutritional Testing Support -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-tag" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>8. Nutritional Testing Support</h3>
+                    <p>Comprehensive profiling of your food products to create accurate, compliant nutritional labels for consumer packaging.</p>
+                    <ul class="efs-list">
+                        <li>Calorie, fat & protein analysis</li>
+                        <li>Vitamin & mineral profiling</li>
+                        <li>Regulatory label compliance</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Request a Test →</a>
+                </div>
+
             </div>
 
             <!-- Common Parameters Tested Banner -->
@@ -940,8 +1040,8 @@
             </div>
         </div>
         <div class="container copyright"><span>© 2026 Elite food safety and compliance services. All rights
-                reserved.</span><span>Privacy Policy &nbsp; •
-                &nbsp; Terms of Use</span></div>
+                reserved.</span><span>Privacy Policy   •
+                  Terms of Use</span></div>
     </footer>
     <a class="whatsapp" href="https://wa.me/917070704714" aria-label="Chat on WhatsApp" target="_blank"
         rel="noopener">☏<span>WhatsApp us</span></a>

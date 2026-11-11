@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government License & Approval Assistance | Elite Food Safety</title>
+
+    <!-- Existing global stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- ISOLATED PAGE STYLES -->
+    <style>
+        :root {
+            --efs-dark: #1A3B34;
+            --efs-lime: #C0D72F;
+            --efs-cream: #F4F1EA;
+            --efs-white: #FFFFFF;
+            --efs-text: #4A4A4A;
+        }
+
+        .efs-section {
+            display: block !important;
+            width: 100% !important;
+            clear: both !important;
+            float: none !important;
+            flex: none !important;
+            position: relative;
+            box-sizing: border-box;
+            padding: 80px 0;
+        }
+
+        .efs-container {
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding: 0 20px !important;
+            display: block !important;
+            width: 100% !important;
+            box-sizing: border-box;
+            clear: both !important;
+        }
+
+        /* Reusable Typography & Buttons */
+        .efs-eyebrow {
+            display: inline-block;
+            color: var(--efs-lime);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .efs-heading {
+            font-family: 'Playfair Display', serif;
+            color: var(--efs-dark);
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .efs-paragraph {
+            font-family: 'Inter', sans-serif;
+            color: var(--efs-text);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .efs-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .efs-btn-primary {
+            background-color: var(--efs-lime);
+            color: var(--efs-dark);
+            border: 2px solid var(--efs-lime);
+        }
+
+        .efs-btn-primary:hover {
+            background-color: transparent;
+        }
+
+        .efs-btn-dark {
+            background-color: var(--efs-dark);
+            color: var(--efs-white);
+            border: 2px solid var(--efs-dark);
+        }
+
+        .efs-btn-dark:hover {
+            background-color: transparent;
+            color: var(--efs-dark);
+        }
+
+        .efs-btn-outline {
+            background-color: transparent;
+            color: var(--efs-white);
+            border: 2px solid var(--efs-white);
+        }
+
+        .efs-btn-outline:hover {
+            background-color: var(--efs-white);
+            color: var(--efs-dark);
+        }
+
+        /* Custom Header Override */
+        .efs-header {
+            background: var(--efs-white);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 100;
+        }
+
+        .efs-header-inner {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            flex-direction: row !important;
+        }
+
+        .efs-nav {
+            display: flex !important;
+            gap: 30px !important;
+            align-items: center !important;
+        }
+
+        .efs-nav a {
+            text-decoration: none;
+            color: var(--efs-dark);
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            transition: color 0.3s;
+        }
+
+        .efs-nav a:hover,
+        .efs-nav a.active {
+            color: var(--efs-lime);
+        }
+
+        /* Hero Section */
+        .efs-hero {
+            background-color: var(--efs-dark);
+            color: var(--efs-white);
+            padding: 100px 0;
+        }
+
+        .efs-hero-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 60px !important;
+            align-items: center !important;
+        }
+
+        .efs-hero h1 {
+            font-size: 3.8rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--efs-white);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .efs-hero .italic-highlight {
+            font-style: italic;
+            color: var(--efs-lime);
+        }
+
+        .efs-hero-img-wrap {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            display: block !important;
+            width: 100% !important;
+        }
+
+        .efs-hero-img-wrap img {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            object-fit: cover;
+        }
+
+        /* Introduction */
+        .efs-intro {
+            background-color: var(--efs-cream);
+        }
+
+        .efs-intro-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1.2fr !important;
+            gap: 50px !important;
+            align-items: center !important;
+        }
+
+        .efs-intro-box {
+            background: var(--efs-white);
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid var(--efs-lime);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Services Grid (3 Columns for 11 items) */
+        .efs-services {
+            background-color: #ffffff;
+            padding-top: 0;
+        }
+
+        .efs-services-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 30px !important;
+            margin-top: 40px;
+        }
+
+        .efs-card {
+            background: var(--efs-cream);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+            display: flex !important;
+            flex-direction: column !important;
+            border-top: 4px solid transparent;
+            height: 100%;
+        }
+
+        .efs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--efs-lime);
+            background: var(--efs-white);
+        }
+
+        .efs-card-dark {
+            background: var(--efs-dark) !important;
+            color: var(--efs-white) !important;
+            border-top: 4px solid var(--efs-lime) !important;
+        }
+
+        .efs-icon-wrap {
+            width: 50px;
+            height: 50px;
+            background: var(--efs-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--efs-dark);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .efs-card-dark .efs-icon-wrap {
+            background: var(--efs-lime);
+        }
+
+        .efs-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--efs-dark);
+        }
+
+        .efs-card-dark h3 {
+            color: var(--efs-white);
+        }
+
+        .efs-card p {
+            color: var(--efs-text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .efs-card-dark p {
+            color: #d1d5d4;
+        }
+
+        .efs-link {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: var(--efs-dark);
+            text-decoration: none;
+            margin-top: auto;
+            display: inline-block;
+        }
+
+        .efs-card-dark .efs-link {
+            color: var(--efs-lime);
+        }
+
+        .efs-link:hover {
+            color: var(--efs-lime);
+        }
+
+        /* Why Choose Elite */
+        .efs-premium {
+            background-color: var(--efs-dark);
+            color: var(--efs-white);
+        }
+
+        .efs-premium-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1.5fr !important;
+            gap: 60px !important;
+            align-items: center !important;
+        }
+
+        .efs-features {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 30px !important;
+        }
+
+        .efs-feature-item {
+            text-align: center;
+        }
+
+        .efs-feature-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--efs-white);
+            margin: 15px 0 10px 0;
+            line-height: 1.4;
+        }
+
+        /* Timeline */
+        .efs-timeline-wrapper {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .efs-timeline-line {
+            position: absolute;
+            top: 35px;
+            left: 5%;
+            width: 90%;
+            height: 2px;
+            background: #e0e0e0;
+            z-index: 1;
+        }
+
+        .efs-timeline-step {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .efs-step-num {
+            width: 70px;
+            height: 70px;
+            background: var(--efs-white);
+            border: 2px solid var(--efs-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--efs-dark);
+            margin: 0 auto 15px auto;
+            transition: all 0.3s ease;
+        }
+
+        .efs-timeline-step:hover .efs-step-num {
+            background: var(--efs-lime);
+            border-color: var(--efs-lime);
+        }
+
+        .efs-timeline-step h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: var(--efs-dark);
+            margin-bottom: 10px;
+        }
+
+        .efs-timeline-step p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--efs-text);
+            line-height: 1.5;
+        }
+
+        /* FAQ */
+        .efs-faq-wrap {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+        }
+
+        .efs-faq-item {
+            background: var(--efs-white);
+            border: 1px solid #e0e0e0;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .efs-faq-q {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: var(--efs-dark);
+            font-size: 1.1rem;
+        }
+
+        .efs-faq-a {
+            padding: 0 25px 20px 25px;
+            color: var(--efs-text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            display: none;
+        }
+
+        /* CTA */
+        .efs-cta-wrap {
+            background-color: var(--efs-lime);
+            padding: 80px 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Footer Override */
+        .efs-footer {
+            background-color: var(--efs-dark);
+            color: var(--efs-white);
+            padding: 60px 0 20px 0;
+            display: block !important;
+            width: 100% !important;
+            clear: both !important;
+        }
+
+        .efs-footer-grid {
+            display: grid !important;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr !important;
+            gap: 40px !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 992px) {
+            .efs-hero-grid,
+            .efs-intro-grid,
+            .efs-premium-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .efs-services-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .efs-features {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .efs-timeline-wrapper {
+                flex-direction: column !important;
+            }
+
+            .efs-timeline-line {
+                display: none !important;
+            }
+
+            .efs-timeline-step {
+                display: flex;
+                align-items: flex-start;
+                text-align: left;
+                width: 100%;
+                margin-bottom: 25px;
+            }
+
+            .efs-step-num {
+                margin: 0 20px 0 0;
+                flex-shrink: 0;
+            }
+
+            .efs-footer-grid {
+                grid-template-columns: 1fr 1fr !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .efs-services-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .efs-features {
+                grid-template-columns: 1fr !important;
+                text-align: left;
+            }
+            .efs-feature-item {
+                text-align: left;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+            .efs-feature-item h4 {
+                margin: 0;
+            }
+
+            .efs-footer-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .efs-header-inner {
+                flex-direction: column !important;
+                gap: 20px !important;
+            }
+
+            .efs-nav {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="home">
+        <div class="container nav-wrap">
+            <a class="brand elite-brand" href="../index.html#home" aria-label="Elite Food Safety and Compliance Services home"><img
+                    src="../assets/elite-logo-new.png" alt="Elite Food Safety and Compliance Services" /></a>
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+            <nav class="nav"><a
+                    class="nav-cta" href="../index.html#contact">Get a Consultation <b>→</b></a></nav>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="efs-section efs-hero">
+        <div class="efs-container efs-hero-grid">
+            <div>
+                <span class="efs-eyebrow">Government Approvals & Business Support</span>
+                <h1>Government License & <br><span class="italic-highlight">Approval Assistance.</span></h1>
+                <p class="efs-paragraph" style="color: #d1d5d4;">Navigating government regulations can be complex. We provide end-to-end assistance for all mandatory business licenses, NOCs, and registrations, ensuring your operations are legally secure.</p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <a href="#services" class="efs-btn efs-btn-primary">Explore Services</a>
+                </div>
+            </div>
+            <div class="efs-hero-img-wrap">
+                <!-- Placeholder, replace with your actual hero image -->
+                <img src="../assets/government-approvals.png" alt="Government License Approved Stamp Document">
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="efs-section efs-intro">
+        <div class="efs-container">
+            <div class="efs-intro-grid">
+                <div>
+                    <span class="efs-eyebrow" style="color: var(--efs-dark);">Seamless Compliance</span>
+                    <h2 class="efs-heading">Don't let red tape slow down your business.</h2>
+                    <p class="efs-paragraph">Securing the right government licenses is the first step to establishing a credible and legally sound business. Whether you are setting up a new manufacturing plant or expanding your retail operations, local and central approvals are non-negotiable.</p>
+                    <p class="efs-paragraph">Our dedicated liaison and compliance experts handle the heavy lifting—from document preparation and department submissions to securing the final NOCs and certificates.</p>
+                </div>
+                <div class="efs-intro-box">
+                    <h3
+                        style="font-family: 'Playfair Display', serif; color: var(--efs-dark); font-size: 1.5rem; margin-bottom: 20px;">
+                        Why Outsourcing Helps</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Inter', sans-serif; color: var(--efs-text); line-height: 1.8;">
+                        <li style="position:relative; padding-left:25px; margin-bottom:10px;"><span style="position:absolute; left:0; color:var(--efs-lime); font-weight:bold;">✓</span> Avoids application rejections and delays.</li>
+                        <li style="position:relative; padding-left:25px; margin-bottom:10px;"><span style="position:absolute; left:0; color:var(--efs-lime); font-weight:bold;">✓</span> Ensures perfect documentation matching legal criteria.</li>
+                        <li style="position:relative; padding-left:25px; margin-bottom:10px;"><span style="position:absolute; left:0; color:var(--efs-lime); font-weight:bold;">✓</span> Frees up your internal team to focus on core business.</li>
+                        <li style="position:relative; padding-left:25px; margin-bottom:10px;"><span style="position:absolute; left:0; color:var(--efs-lime); font-weight:bold;">✓</span> Keeps you updated on periodic renewal deadlines.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11 Services Grid -->
+    <section id="services" class="efs-section efs-services">
+        <div class="efs-container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 class="efs-heading">Our Licensing & Approval Services</h2>
+                <p class="efs-paragraph">Complete liaison support for the 11 most critical government registrations required to run a safe, legal, and compliant business.</p>
+            </div>
+
+            <div class="efs-services-grid">
+                <!-- 1. Factory License Assistance -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-industry" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>1. Factory License Assistance</h3>
+                    <p>Obtain mandatory factory licenses under the Factories Act to legally commence your manufacturing and production operations.</p>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 2. Fire NOC Assistance -->
+                <div class="efs-card efs-card-dark">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-fire-extinguisher" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>2. Fire NOC Assistance</h3>
+                    <p>Seamlessly acquire No Objection Certificates from the State Fire Department to ensure your premises meet all fire safety codes.</p>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 3. Pollution Control Board Consent -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-smog" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>3. Pollution Control Board Consent</h3>
+                    <p>End-to-end support for securing Consent to Establish (CTE) and Consent to Operate (CTO) from State Pollution Control Boards.</p>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 4. Shop & Establishment Registration -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-store" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>4. Shop & Establishment</h3>
+                    <p>Quickly sort your local municipal registrations to legally operate your commercial shop, office, or retail establishment.</p>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 5. GST Registration -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-file-invoice-dollar" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>5. GST Registration</h3>
+                    <p>Complete assistance with Goods and Services Tax (GST) registration, document verification, and initial compliance setup.</p>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 6. MSME / Udyam Registration -->
+                <div class="efs-card efs-card-dark">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-building" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>6. MSME / Udyam Registration</h3>
+                    <p>Register your enterprise under MSME to unlock government subsidies, easier bank loans, and various tax benefits.</p>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 7. Pest Control License Assistance -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-bug" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>7. Pest Control License</h3>
+                    <p>Specialized guidance to secure commercial pest control licenses required for food storage and large-scale operations.</p>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 8. CGWA NOC Guidance -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-water" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>8. CGWA NOC Guidance</h3>
+                    <p>Expert consultation for securing Central Ground Water Authority (CGWA) No Objection Certificates for industrial water extraction.</p>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 9. Trade License Assistance -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-id-card" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>9. Trade License Assistance</h3>
+                    <p>Hassle-free procurement of trade licenses from local municipal corporations, allowing you to carry out your specific business activities.</p>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 10. Export Documentation Support -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-ship" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>10. Export Documentation</h3>
+                    <p>Comprehensive support for IEC codes, APEDA registration, Certificates of Origin, and other critical export-related paperwork.</p>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 11. Import Clearance Support -->
+                <div class="efs-card efs-card-dark">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-box-open" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>11. Import Clearance Support</h3>
+                    <p>Navigate complex customs regulations, FSSAI import clearances, and logistics documentation for seamless goods importation.</p>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Elite? -->
+    <section class="efs-section efs-premium">
+        <div class="efs-container efs-premium-grid">
+            <div>
+                <h2 class="efs-heading" style="color: var(--efs-white);">Why Choose <br><span style="color: var(--efs-lime); font-style: italic;">Elite?</span></h2>
+                <p class="efs-paragraph" style="color: #d1d5d4;">Getting government approvals shouldn't be a headache. We act as your single point of contact for all regulatory liaisons.</p>
+                <a href="../contact.html" class="efs-btn efs-btn-primary">Consult With Us</a>
+            </div>
+            
+            <div class="efs-features">
+                <div class="efs-feature-item">
+                    <i class="fa-solid fa-user-tie" style="color: var(--efs-lime); font-size: 2rem;"></i>
+                    <h4>Experienced Consultants</h4>
+                </div>
+                <div class="efs-feature-item">
+                    <i class="fa-solid fa-folder-open" style="color: var(--efs-lime); font-size: 2rem;"></i>
+                    <h4>Flawless Documentation</h4>
+                </div>
+                <div class="efs-feature-item">
+                    <i class="fa-solid fa-stopwatch" style="color: var(--efs-lime); font-size: 2rem;"></i>
+                    <h4>Quick Turnaround Time</h4>
+                </div>
+                <div class="efs-feature-item">
+                    <i class="fa-solid fa-handshake" style="color: var(--efs-lime); font-size: 2rem;"></i>
+                    <h4>End-to-End Liaison Support</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline (Approval Process) -->
+    <section class="efs-section" style="background-color: #ffffff;">
+        <div class="efs-container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 class="efs-heading">How we secure your approvals.</h2>
+                <p class="efs-paragraph">A transparent, 5-step process to take you from application to final certification without the stress.</p>
+            </div>
+
+            <div class="efs-timeline-wrapper">
+                <div class="efs-timeline-line"></div>
+
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">1</div>
+                    <div>
+                        <h4>Requirement Analysis</h4>
+                        <p>We assess your business type and identify the exact government licenses required.</p>
+                    </div>
+                </div>
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">2</div>
+                    <div>
+                        <h4>Document Preparation</h4>
+                        <p>Gathering, drafting, and verifying all legal documents needed for submission.</p>
+                    </div>
+                </div>
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">3</div>
+                    <div>
+                        <h4>Application Filing</h4>
+                        <p>Submitting error-free applications to the respective government departments.</p>
+                    </div>
+                </div>
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">4</div>
+                    <div>
+                        <h4>Department Liaison</h4>
+                        <p>Handling query responses, follow-ups, and coordinating department inspections.</p>
+                    </div>
+                </div>
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">5</div>
+                    <div>
+                        <h4>License Issuance</h4>
+                        <p>Successfully procuring and handing over your valid government certificate/NOC.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="efs-section" style="background-color: var(--efs-cream);">
+        <div class="efs-container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 class="efs-heading">Frequently Asked Questions</h2>
+                <p class="efs-paragraph">Common questions regarding government registrations and NOCs.</p>
+            </div>
+
+            <div class="efs-faq-wrap">
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        What is the difference between CTE and CTO?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">CTE (Consent to Establish) is required before you begin construction or set up a factory. CTO (Consent to Operate) is required after setup, before you actually start production or operations. Both are issued by the State Pollution Control Board.</div>
+                </div>
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        Is MSME / Udyam Registration mandatory?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">While not strictly mandatory for operations, MSME registration is highly recommended. It provides legal protection against delayed payments, offers subsidized bank loans, and makes you eligible for various government tenders and schemes.</div>
+                </div>
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        How long does it take to get a Fire NOC?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">The timeline varies based on your state and the size of your facility. Typically, after the application and physical inspection by the fire department, it takes between 3 to 4 weeks to receive the final Fire NOC.</div>
+                </div>
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        Do you help with license renewals?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">Yes. We provide continuous support. We track the validity of your Trade Licenses, Factory Licenses, and NOCs, and assist with the complete renewal process before they expire to prevent penalties.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="efs-section" style="padding-top: 20px; background-color: var(--efs-cream);">
+        <div class="efs-container">
+            <div class="efs-cta-wrap">
+                <h2 class="efs-heading">Clear the path for your business.</h2>
+                <p class="efs-paragraph" style="color: var(--efs-dark); max-width: 600px; margin: 0 auto 30px auto;">Get your mandatory government licenses and NOCs sorted quickly by our liaison experts.</p>
+                <a href="../index.html#contact" class="efs-btn efs-btn-dark">Start Your Registration</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <a class="brand elite-brand" href="#home"
+                    aria-label="Elite Food Safety and Compliance Services home"><img src="../assets/elite-logo-new.png"
+                        alt="Elite Food Safety and Compliance Services" /></a>
+                <p>Helping food businesses build a safer, more trusted future.</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com/elitefoodsafetyandcompliance/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/elitefoodsafetyandcompliance" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4><a href="#about">About Elite</a><a href="#services">Our Services</a><a
+                    href="#industries">Industries</a><a href="#contact">Contact Us</a>
+            </div>
+            <div>
+                <h4>Our Services</h4><a href="#services">Food Safety</a><a href="#services">ISO Certification</a><a
+                    href="#services">FSSAI Compliance</a><a href="#services">Training & Auditing</a>
+            </div>
+            <div>
+                <h4>Visit us</h4>
+                <p>1st Floor, Choudhary Market, Opposite Sai TVS Showroom,<br>Near Ratu Road, Ranchi, Jharkhand - 834001</p><a
+                    href="mailto:elitefoodsafetycompliance@gmail.com">elitefoodsafetycompliance@gmail.com</a><a
+                    href="tel:+919262944752">+91
+                    9262944752</a>
+            </div>
+        </div>
+        <div class="container copyright"><span>© 2026 Elite food safety and compliance services. All rights
+                reserved.</span><span>Privacy Policy   •
+                  Terms of Use</span></div>
+    </footer>
+    <a class="whatsapp" href="https://wa.me/917070704714" aria-label="Chat on WhatsApp" target="_blank"
+        rel="noopener">☏<span>WhatsApp us</span></a>
+
+    <!-- Existing Script -->
+    <script src="../script.js"></script>
+
+    <!-- Local script for FAQ -->
+    <script>
+        function toggleFaq(el) {
+            const answer = el.nextElementSibling;
+            const icon = el.querySelector('span');
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                icon.innerHTML = "+";
+            } else {
+                answer.style.display = "block";
+                icon.innerHTML = "-";
+            }
+        }
+    </script>
+</body>
+
+</html>
