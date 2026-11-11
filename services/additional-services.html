@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Consultancy Services | Elite Food Safety</title>
+
+    <!-- Existing global stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- ISOLATED PAGE STYLES -->
+    <style>
+        :root {
+            --efs-dark: #1A3B34;
+            --efs-lime: #C0D72F;
+            --efs-cream: #F4F1EA;
+            --efs-white: #FFFFFF;
+            --efs-text: #4A4A4A;
+        }
+
+        .efs-section {
+            display: block !important;
+            width: 100% !important;
+            clear: both !important;
+            float: none !important;
+            flex: none !important;
+            position: relative;
+            box-sizing: border-box;
+            padding: 80px 0;
+        }
+
+        .efs-container {
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding: 0 20px !important;
+            display: block !important;
+            width: 100% !important;
+            box-sizing: border-box;
+            clear: both !important;
+        }
+
+        /* Reusable Typography & Buttons */
+        .efs-eyebrow {
+            display: inline-block;
+            color: var(--efs-lime);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .efs-heading {
+            font-family: 'Playfair Display', serif;
+            color: var(--efs-dark);
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .efs-paragraph {
+            font-family: 'Inter', sans-serif;
+            color: var(--efs-text);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .efs-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .efs-btn-primary {
+            background-color: var(--efs-lime);
+            color: var(--efs-dark);
+            border: 2px solid var(--efs-lime);
+        }
+
+        .efs-btn-primary:hover {
+            background-color: transparent;
+        }
+
+        .efs-btn-dark {
+            background-color: var(--efs-dark);
+            color: var(--efs-white);
+            border: 2px solid var(--efs-dark);
+        }
+
+        .efs-btn-dark:hover {
+            background-color: transparent;
+            color: var(--efs-dark);
+        }
+
+        .efs-btn-outline {
+            background-color: transparent;
+            color: var(--efs-white);
+            border: 2px solid var(--efs-white);
+        }
+
+        .efs-btn-outline:hover {
+            background-color: var(--efs-white);
+            color: var(--efs-dark);
+        }
+
+        /* Custom Header Override */
+        .efs-header {
+            background: var(--efs-white);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 100;
+        }
+
+        .efs-header-inner {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            flex-direction: row !important;
+        }
+
+        .efs-nav {
+            display: flex !important;
+            gap: 30px !important;
+            align-items: center !important;
+        }
+
+        .efs-nav a {
+            text-decoration: none;
+            color: var(--efs-dark);
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            transition: color 0.3s;
+        }
+
+        .efs-nav a:hover,
+        .efs-nav a.active {
+            color: var(--efs-lime);
+        }
+
+        /* Hero Section */
+        .efs-hero {
+            background-color: var(--efs-dark);
+            color: var(--efs-white);
+            padding: 100px 0;
+        }
+
+        .efs-hero-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 60px !important;
+            align-items: center !important;
+        }
+
+        .efs-hero h1 {
+            font-size: 3.8rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--efs-white);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .efs-hero .italic-highlight {
+            font-style: italic;
+            color: var(--efs-lime);
+        }
+
+        .efs-hero-img-wrap {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            display: block !important;
+            width: 100% !important;
+        }
+
+        .efs-hero-img-wrap img {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            object-fit: cover;
+        }
+
+        /* Introduction */
+        .efs-intro {
+            background-color: var(--efs-cream);
+        }
+
+        .efs-intro-grid {
+            display: grid !important;
+            grid-template-columns: 1.2fr 1fr !important;
+            gap: 50px !important;
+            align-items: center !important;
+        }
+
+        .efs-intro-box {
+            background: var(--efs-white);
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid var(--efs-dark);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Services Grid (3 Columns for 8 items) */
+        .efs-services {
+            background-color: #ffffff;
+            padding-top: 0;
+        }
+
+        .efs-services-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 30px !important;
+            margin-top: 40px;
+        }
+
+        /* Centering the 8th card on desktop to look elegant */
+        .efs-services-grid > div:nth-child(8) {
+            grid-column: 2 !important;
+        }
+
+        .efs-card {
+            background: var(--efs-cream);
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+            display: flex !important;
+            flex-direction: column !important;
+            border-top: 4px solid transparent;
+            height: 100%;
+        }
+
+        .efs-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--efs-lime);
+            background: var(--efs-white);
+        }
+
+        .efs-card-dark {
+            background: var(--efs-dark) !important;
+            color: var(--efs-white) !important;
+            border-top: 4px solid var(--efs-lime) !important;
+        }
+
+        .efs-icon-wrap {
+            width: 50px;
+            height: 50px;
+            background: var(--efs-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--efs-dark);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .efs-card-dark .efs-icon-wrap {
+            background: var(--efs-lime);
+        }
+
+        .efs-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--efs-dark);
+            line-height: 1.3;
+        }
+
+        .efs-card-dark h3 {
+            color: var(--efs-white);
+        }
+
+        .efs-card p {
+            color: var(--efs-text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .efs-card-dark p {
+            color: #d1d5d4;
+        }
+
+        .efs-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            flex-grow: 1;
+        }
+
+        .efs-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--efs-text);
+            line-height: 1.4;
+        }
+
+        .efs-card-dark .efs-list li {
+            color: #d1d5d4;
+        }
+
+        .efs-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--efs-lime);
+            font-weight: bold;
+        }
+
+        .efs-link {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: var(--efs-dark);
+            text-decoration: none;
+            margin-top: auto;
+            display: inline-block;
+        }
+
+        .efs-card-dark .efs-link {
+            color: var(--efs-lime);
+        }
+
+        .efs-link:hover {
+            color: var(--efs-lime);
+        }
+
+        /* Why Choose Elite */
+        .efs-premium {
+            background-color: var(--efs-dark);
+            color: var(--efs-white);
+        }
+
+        .efs-premium-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1.5fr !important;
+            gap: 60px !important;
+            align-items: center !important;
+        }
+
+        .efs-features {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 30px !important;
+        }
+
+        .efs-feature-item {
+            text-align: center;
+        }
+
+        .efs-feature-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--efs-white);
+            margin: 15px 0 10px 0;
+            line-height: 1.4;
+        }
+
+        /* Timeline */
+        .efs-timeline-wrapper {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-start !important;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .efs-timeline-line {
+            position: absolute;
+            top: 35px;
+            left: 5%;
+            width: 90%;
+            height: 2px;
+            background: #e0e0e0;
+            z-index: 1;
+        }
+
+        .efs-timeline-step {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .efs-step-num {
+            width: 70px;
+            height: 70px;
+            background: var(--efs-white);
+            border: 2px solid var(--efs-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--efs-dark);
+            margin: 0 auto 15px auto;
+            transition: all 0.3s ease;
+        }
+
+        .efs-timeline-step:hover .efs-step-num {
+            background: var(--efs-lime);
+            border-color: var(--efs-lime);
+        }
+
+        .efs-timeline-step h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: var(--efs-dark);
+            margin-bottom: 10px;
+        }
+
+        .efs-timeline-step p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--efs-text);
+            line-height: 1.5;
+        }
+
+        /* FAQ */
+        .efs-faq-wrap {
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+        }
+
+        .efs-faq-item {
+            background: var(--efs-white);
+            border: 1px solid #e0e0e0;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .efs-faq-q {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: var(--efs-dark);
+            font-size: 1.1rem;
+        }
+
+        .efs-faq-a {
+            padding: 0 25px 20px 25px;
+            color: var(--efs-text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            display: none;
+        }
+
+        /* CTA */
+        .efs-cta-wrap {
+            background-color: var(--efs-lime);
+            padding: 80px 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Footer Override */
+        .efs-footer {
+            background-color: var(--efs-dark);
+            color: var(--efs-white);
+            padding: 60px 0 20px 0;
+            display: block !important;
+            width: 100% !important;
+            clear: both !important;
+        }
+
+        .efs-footer-grid {
+            display: grid !important;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr !important;
+            gap: 40px !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 992px) {
+            .efs-hero-grid,
+            .efs-intro-grid,
+            .efs-premium-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .efs-services-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            /* Un-center the 8th card for tablet to span across or fit naturally */
+            .efs-services-grid > div:nth-child(8) {
+                grid-column: 1 / span 2 !important;
+            }
+
+            .efs-features {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+
+            .efs-timeline-wrapper {
+                flex-direction: column !important;
+            }
+
+            .efs-timeline-line {
+                display: none !important;
+            }
+
+            .efs-timeline-step {
+                display: flex;
+                align-items: flex-start;
+                text-align: left;
+                width: 100%;
+                margin-bottom: 25px;
+            }
+
+            .efs-step-num {
+                margin: 0 20px 0 0;
+                flex-shrink: 0;
+            }
+
+            .efs-footer-grid {
+                grid-template-columns: 1fr 1fr !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .efs-services-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .efs-services-grid > div:nth-child(8) {
+                grid-column: 1 !important;
+            }
+
+            .efs-features {
+                grid-template-columns: 1fr !important;
+                text-align: left;
+            }
+            .efs-feature-item {
+                text-align: left;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+            .efs-feature-item h4 {
+                margin: 0;
+            }
+
+            .efs-footer-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .efs-header-inner {
+                flex-direction: column !important;
+                gap: 20px !important;
+            }
+
+            .efs-nav {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="home">
+        <div class="container nav-wrap">
+            <a class="brand elite-brand" href="../index.html#home" aria-label="Elite Food Safety and Compliance Services home"><img
+                    src="../assets/elite-logo-new.png" alt="Elite Food Safety and Compliance Services" /></a>
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+            <nav class="nav"><a
+                    class="nav-cta" href="../index.html#contact">Get a Consultation <b>→</b></a></nav>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="efs-section efs-hero">
+        <div class="efs-container efs-hero-grid">
+            <div>
+                <span class="efs-eyebrow">Comprehensive Support Solutions</span>
+                <h1>Additional <span class="italic-highlight">Consultancy Services.</span></h1>
+                <p class="efs-paragraph" style="color: #d1d5d4;">Beyond standard licensing, we offer specialized consulting covering pest control, medical fitness documentation, PMEGP reports, and end-to-end regulatory support to ensure every corner of your business is compliant.</p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <a href="#services" class="efs-btn efs-btn-primary">Explore Services</a>
+                </div>
+            </div>
+            <div class="efs-hero-img-wrap">
+                <!-- Replace with an appropriate consultancy/business growth image -->
+                <img src="../assets/additional.png" alt="Business Consultation and Planning">
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="efs-section efs-intro">
+        <div class="efs-container">
+            <div class="efs-intro-grid">
+                <div>
+                    <span class="efs-eyebrow" style="color: var(--efs-dark);">360° Business Protection</span>
+                    <h2 class="efs-heading">Closing the hidden gaps in compliance.</h2>
+                    <p class="efs-paragraph">True compliance extends beyond just holding an FSSAI certificate. Regulatory bodies frequently penalize businesses for overlooking secondary requirements like proper pest control logs, valid medical fitness certificates for handlers, and compliant product packaging.</p>
+                    <p class="efs-paragraph">Our additional consultancy services act as an insurance policy for your operations, covering the finer details that inspectors look for, while simultaneously helping you leverage government schemes like PMEGP for business growth.</p>
+                </div>
+                <div class="efs-intro-box">
+                    <h3 style="font-family: 'Playfair Display', serif; color: var(--efs-dark); font-size: 1.5rem; margin-bottom: 20px;">
+                        The Elite Advantage</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-family: 'Inter', sans-serif; color: #555; line-height: 1.8;">
+                        <li style="position:relative; padding-left:25px; margin-bottom:10px;"><span style="position:absolute; left:0; color:var(--efs-lime); font-weight:bold;">✓</span> Mitigate sudden regulatory penalties.</li>
+                        <li style="position:relative; padding-left:25px; margin-bottom:10px;"><span style="position:absolute; left:0; color:var(--efs-lime); font-weight:bold;">✓</span> Foster a culture of safety via awareness programs.</li>
+                        <li style="position:relative; padding-left:25px; margin-bottom:10px;"><span style="position:absolute; left:0; color:var(--efs-lime); font-weight:bold;">✓</span> Secure business funding through accurate project reports.</li>
+                        <li style="position:relative; padding-left:25px; margin-bottom:10px;"><span style="position:absolute; left:0; color:var(--efs-lime); font-weight:bold;">✓</span> Ensure packaging meets strict legal metrology laws.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8 Services Grid -->
+    <section id="services" class="efs-section efs-services">
+        <div class="efs-container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 class="efs-heading">Our Specialized Services</h2>
+                <p class="efs-paragraph">Tailored solutions that cover the critical, often-overlooked elements of running a compliant food business.</p>
+            </div>
+
+            <div class="efs-services-grid">
+                <!-- 1. Pest Control Documentation -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-bug-slash" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>1. Pest Control Documentation</h3>
+                    <p>Maintain flawless records required during food safety audits to prove effective pest management[cite: 26].</p>
+                    <ul class="efs-list">
+                        <li>Pest control schedules & logs</li>
+                        <li>Vendor contract compliance</li>
+                        <li>Chemical usage records</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 2. Medical Fitness Certificate Documentation -->
+                <div class="efs-card efs-card-dark">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-notes-medical" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>2. Medical Fitness Documentation</h3>
+                    <p>Ensure all food handlers possess the legally mandated health certificates to prevent contamination risks[cite: 26].</p>
+                    <ul class="efs-list">
+                        <li>FSSAI mandatory health formats</li>
+                        <li>Annual medical checkup tracking</li>
+                        <li>Communicable disease screening logs</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 3. PMEGP Project Report -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-file-invoice-dollar" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>3. PMEGP Project Report</h3>
+                    <p>Expert drafting of project reports required to secure funding and subsidies under the PM Employment Generation Programme[cite: 26].</p>
+                    <ul class="efs-list">
+                        <li>Detailed financial projections</li>
+                        <li>Business model documentation</li>
+                        <li>Bank loan approval assistance</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 4. Food Business Consultancy -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-shop" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>4. Food Business Consultancy</h3>
+                    <p>Strategic advisory for startups and expanding operations to optimize processes and align with regulatory frameworks[cite: 26].</p>
+                    <ul class="efs-list">
+                        <li>Market entry & compliance strategy</li>
+                        <li>Operational efficiency planning</li>
+                        <li>End-to-end regulatory mapping</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 5. Packaging Compliance -->
+                <div class="efs-card efs-card-dark">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-box-open" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>5. Packaging Compliance</h3>
+                    <p>Verify that your packaging materials and label declarations strictly follow FSSAI and Legal Metrology standards[cite: 26].</p>
+                    <ul class="efs-list">
+                        <li>Food-grade material verification</li>
+                        <li>Label artwork & claim checks</li>
+                        <li>Barcode & batch coding standards</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 6. Food Safety Awareness Programs -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-person-chalkboard" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>6. Safety Awareness Programs</h3>
+                    <p>Short, impactful sessions designed to build a culture of safety and hygiene among your ground-level workforce[cite: 26].</p>
+                    <ul class="efs-list">
+                        <li>Basic sanitation best practices</li>
+                        <li>Cross-contamination prevention</li>
+                        <li>Workplace safety protocols</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 7. Internship Programs -->
+                <div class="efs-card">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-user-graduate" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>7. Internship Programs</h3>
+                    <p>Structured industry exposure for students and budding professionals seeking real-world experience in food compliance[cite: 26].</p>
+                    <ul class="efs-list">
+                        <li>Hands-on auditing experience</li>
+                        <li>Regulatory framework exposure</li>
+                        <li>Professional skill development</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+                <!-- 8. Regulatory Compliance Support (Centered on desktop) -->
+                <div class="efs-card efs-card-dark">
+                    <div class="efs-icon-wrap">
+                        <i class="fa-solid fa-scale-balanced" style="font-size: 1.5rem;"></i>
+                    </div>
+                    <h3>8. Regulatory Compliance Support</h3>
+                    <p>Ongoing retained advisory to keep your business updated and protected against changing food safety laws[cite: 26].</p>
+                    <ul class="efs-list">
+                        <li>Continuous legal updates</li>
+                        <li>Notice & query resolution</li>
+                        <li>Comprehensive compliance tracking</li>
+                    </ul>
+                    <a href="../contact.html" class="efs-link">Get Details →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Elite? -->
+    <section class="efs-section efs-premium">
+        <div class="efs-container efs-premium-grid">
+            <div>
+                <h2 class="efs-heading" style="color: var(--efs-white);">Why Choose <br><span style="color: var(--efs-lime); font-style: italic;">Elite?</span></h2>
+                <p class="efs-paragraph" style="color: #d1d5d4;">Your partner in complete business protection. We look past the obvious to secure every aspect of your operations.</p>
+                <a href="../contact.html" class="efs-btn efs-btn-primary">Contact Us Today!</a>
+            </div>
+            
+            <div class="efs-features">
+                <div class="efs-feature-item">
+                    <i class="fa-solid fa-user-tie" style="color: var(--efs-lime); font-size: 2rem;"></i>
+                    <h4>Expert Professionals</h4>
+                </div>
+                <div class="efs-feature-item">
+                    <i class="fa-solid fa-puzzle-piece" style="color: var(--efs-lime); font-size: 2rem;"></i>
+                    <h4>Customized Solutions</h4>
+                </div>
+                <div class="efs-feature-item">
+                    <i class="fa-solid fa-certificate" style="color: var(--efs-lime); font-size: 2rem;"></i>
+                    <h4>100% Compliance Assurance</h4>
+                </div>
+                <div class="efs-feature-item">
+                    <i class="fa-solid fa-stopwatch" style="color: var(--efs-lime); font-size: 2rem;"></i>
+                    <h4>Timely Support & Quick Turnaround</h4>
+                </div>
+                <div class="efs-feature-item">
+                    <i class="fa-solid fa-chart-line" style="color: var(--efs-lime); font-size: 2rem;"></i>
+                    <h4>Cost Effective & Reliable Services</h4>
+                </div>
+                <div class="efs-feature-item">
+                    <i class="fa-solid fa-people-arrows" style="color: var(--efs-lime); font-size: 2rem;"></i>
+                    <h4>End-to-End Support</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline (Consulting Process) -->
+    <section class="efs-section" style="background-color: #ffffff;">
+        <div class="efs-container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 class="efs-heading">Our Consulting Process.</h2>
+                <p class="efs-paragraph">A precise, step-by-step methodology to assess, strategize, and implement secondary compliance needs.</p>
+            </div>
+
+            <div class="efs-timeline-wrapper">
+                <div class="efs-timeline-line"></div>
+
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">1</div>
+                    <div>
+                        <h4>Initial Consultation</h4>
+                        <p>We discuss your specific business roadblocks, from funding needs to minor documentation gaps.</p>
+                    </div>
+                </div>
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">2</div>
+                    <div>
+                        <h4>Needs Assessment</h4>
+                        <p>A thorough review of your current paperwork, packaging, and employee compliance status.</p>
+                    </div>
+                </div>
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">3</div>
+                    <div>
+                        <h4>Strategy & Drafting</h4>
+                        <p>We prepare the PMEGP reports, design training modules, and draft the required compliance logs.</p>
+                    </div>
+                </div>
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">4</div>
+                    <div>
+                        <h4>Implementation</h4>
+                        <p>Executing the systems within your facility, including awareness training and medical checkups.</p>
+                    </div>
+                </div>
+                <div class="efs-timeline-step">
+                    <div class="efs-step-num">5</div>
+                    <div>
+                        <h4>Continuous Support</h4>
+                        <p>Providing ongoing regulatory updates and audit-readiness assistance to keep you secure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="efs-section" style="background-color: var(--efs-cream);">
+        <div class="efs-container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 class="efs-heading">Frequently Asked Questions</h2>
+                <p class="efs-paragraph">Common questions about our specialized support and documentation services.</p>
+            </div>
+
+            <div class="efs-faq-wrap">
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        What is a PMEGP Project Report and why do I need it?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">The Prime Minister's Employment Generation Programme (PMEGP) provides financial assistance and subsidies to set up new micro-enterprises. A highly detailed, professionally drafted Project Report is mandatory for banks to approve your loan under this scheme.</div>
+                </div>
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        Are Medical Fitness Certificates really mandatory for my staff?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">Yes. Under FSSAI regulations, any employee directly handling food must undergo an annual medical examination. They must possess a valid Medical Fitness Certificate in the prescribed FSSAI format to prove they are free from communicable diseases.</div>
+                </div>
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        What does Packaging Compliance entail?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">It ensures your food packaging meets Legal Metrology rules and FSSAI labeling guidelines. We check that mandatory details (like nutritional info, allergens, veg/non-veg logos, and manufacturer details) are correctly placed and formatted before you print your packaging.</div>
+                </div>
+                <div class="efs-faq-item">
+                    <div class="efs-faq-q" onclick="toggleFaq(this)">
+                        How can the Internship Programs benefit students?
+                        <span style="color: var(--efs-lime); font-size: 1.5rem;">+</span>
+                    </div>
+                    <div class="efs-faq-a">Our internship programs provide students with hands-on exposure to real-world industrial compliance, auditing processes, and FSSAI regulations. It bridges the gap between academic theory and practical industry requirements.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="efs-section" style="padding-top: 20px; background-color: var(--efs-cream);">
+        <div class="efs-container">
+            <div class="efs-cta-wrap">
+                <h2 class="efs-heading">Need tailored business support?</h2>
+                <p class="efs-paragraph" style="color: var(--efs-dark); max-width: 600px; margin: 0 auto 30px auto;">From securing government funding to ensuring your staff is legally fit to work, we have you covered.</p>
+                <a href="../index.html#contact" class="efs-btn efs-btn-dark">Consult With Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <a class="brand elite-brand" href="#home"
+                    aria-label="Elite Food Safety and Compliance Services home"><img src="../assets/elite-logo-new.png"
+                        alt="Elite Food Safety and Compliance Services" /></a>
+                <p>Helping food businesses build a safer, more trusted future.</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com/elitefoodsafetyandcompliance/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/elitefoodsafetyandcompliance" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4><a href="#about">About Elite</a><a href="#services">Our Services</a><a
+                    href="#industries">Industries</a><a href="#contact">Contact Us</a>
+            </div>
+            <div>
+                <h4>Our Services</h4><a href="#services">Food Safety</a><a href="#services">ISO Certification</a><a
+                    href="#services">FSSAI Compliance</a><a href="#services">Training & Auditing</a>
+            </div>
+            <div>
+                <h4>Visit us</h4>
+                <p>1st Floor, Choudhary Market, Opposite Sai TVS Showroom,<br>Near Ratu Road, Ranchi, Jharkhand - 834001</p><a
+                    href="mailto:elitefoodsafetycompliance@gmail.com">elitefoodsafetycompliance@gmail.com</a><a
+                    href="tel:+919262944752">+91
+                    9262944752</a>
+            </div>
+        </div>
+        <div class="container copyright"><span>© 2026 Elite food safety and compliance services. All rights
+                reserved.</span><span>Privacy Policy   •
+                  Terms of Use</span></div>
+    </footer>
+    <a class="whatsapp" href="https://wa.me/917070704714" aria-label="Chat on WhatsApp" target="_blank"
+        rel="noopener">☏<span>WhatsApp us</span></a>
+
+    <!-- Existing Script -->
+    <script src="../script.js"></script>
+
+    <!-- Local script for FAQ -->
+    <script>
+        function toggleFaq(el) {
+            const answer = el.nextElementSibling;
+            const icon = el.querySelector('span');
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                icon.innerHTML = "+";
+            } else {
+                answer.style.display = "block";
+                icon.innerHTML = "-";
+            }
+        }
+    </script>
+</body>
+
+</html>
